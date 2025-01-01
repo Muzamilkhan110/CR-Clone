@@ -7,8 +7,8 @@ function Header() {
     <header className="bg-black">
       <nav className="container mx-auto flex justify-around items-center  h-[82px] px-8">
         {/* Logo Section */}
-        <div className="flex items-center">
-          <Image
+        <div  className="flex items-center">
+          <Image 
             src="/logo-light.svg"
             alt="Company Logo"
             width={200}

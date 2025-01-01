@@ -7,6 +7,44 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { document } from "postcss";
 
+const cards = [
+  {
+    image : "/RyanClient.webp",
+    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name : "Ryan Flaherty",
+    pic : "/stars.svg",
+    rating : "4.9 Ratings",
+  },
+  {
+    image : "/RyanClient.webp",
+    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name : "Ryan Flaherty",
+    pic : "/stars.svg",
+    rating : "4.9 Ratings",
+  },
+  {
+    image : "/RyanClient.webp",
+    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name : "Ryan Flaherty",
+    pic : "/stars.svg",
+    rating : "4.9 Ratings",
+  },
+  {
+    image : "/RyanClient.webp",
+    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name : "Ryan Flaherty",
+    pic : "/stars.svg",
+    rating : "4.9 Ratings",
+  },
+  {
+    image : "/RyanClient.webp",
+    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name : "Ryan Flaherty",
+    pic : "/stars.svg",
+    rating : "4.9 Ratings",
+  },
+  
+]
 export default function Home() {
   return (
     <main className="bg-black">
@@ -555,7 +593,8 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="container m-auto max-w-screen-lg ">
+      <section className="bg-zinc-900">
+        <div className="container m-auto max-w-screen-lg ">
         <div>
           <div className="my-16">
             <div className="flex justify-center gap-3">
@@ -569,7 +608,7 @@ export default function Home() {
             </p>
           </div>
           <div className=" grid grid-cols-3 text-white gap-6">
-            <div className="rounded-2xl bg-zinc-900">
+            <div className="rounded-2xl bg-black">
               <Image
                 className="flex rounded-t-2xl"
                 width={1000}
@@ -606,7 +645,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl bg-zinc-900">
+            <div className="rounded-2xl bg-black">
               <Image
                 className="flex rounded-t-2xl w-full h-[43%]"
                 width={1000}
@@ -641,7 +680,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl bg-zinc-900">
+            <div className="rounded-2xl bg-black">
               <Image
                 className="flex rounded-t-2xl w-full h-[43%]"
                 width={1000}
@@ -682,6 +721,23 @@ export default function Home() {
               View all Blogs
             </button>
           </div>
+        </div>
+        </div>
+      </section>
+
+      <section className="min-h-screen flex justify-center items-center ">
+        <div className="grid grid-cols-5  ">
+        {cards.map((card , index) =>(
+          <div key={index} className="bg-gray-800 text-white rounded-lg p-6 shadow-lg">
+            <Image src={card.image} alt={card.image} width={80} height={80} className="rounded-full mb-4"/>
+            <h3>{card.name}</h3>
+            <p className="mb-4">{card.text}</p>
+            <div>
+              <Image src={card.pic} alt="stars" width={50} height={50}/>
+              <span className="mt-2 font-bold">{card.rating}</span>
+            </div>
+          </div>
+        ))}
         </div>
       </section>
     </main>
