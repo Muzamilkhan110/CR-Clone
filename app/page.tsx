@@ -733,6 +733,8 @@ export default function Home() {
             <h3>{card.name}</h3>
             <p className="mb-4">{card.text}</p>
             <div>
+
+              
               <Image src={card.pic} alt="stars" width={50} height={50}/>
               <span className="mt-2 font-bold">{card.rating}</span>
             </div>
