@@ -6,45 +6,56 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { document } from "postcss";
+import Logo from "@/components/Logo/Logo";
+import Button from "@/components/button/Button";
+import Card from "@/components/cards/Crads";
+import { cardDescription} from "@/app/data/first/page"
+import { cardDescription1 } from "@/app/data/second/page"
+import ImageCard from "@/components/imagecard/Image-Card";
+import { cardDescription3 } from "./data/third/page";
 
 const cards = [
   {
-    image : "/RyanClient.webp",
-    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name : "Ryan Flaherty",
-    pic : "/stars.svg",
-    rating : "4.9 Ratings",
+    image: "/RyanClient.webp",
+    text:
+      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name: "Ryan Flaherty",
+    pic: "/stars.svg",
+    rating: "4.9 Ratings",
   },
   {
-    image : "/RyanClient.webp",
-    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name : "Ryan Flaherty",
-    pic : "/stars.svg",
-    rating : "4.9 Ratings",
+    image: "/RyanClient.webp",
+    text:
+      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name: "Ryan Flaherty",
+    pic: "/stars.svg",
+    rating: "4.9 Ratings",
   },
   {
-    image : "/RyanClient.webp",
-    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name : "Ryan Flaherty",
-    pic : "/stars.svg",
-    rating : "4.9 Ratings",
+    image: "/RyanClient.webp",
+    text:
+      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name: "Ryan Flaherty",
+    pic: "/stars.svg",
+    rating: "4.9 Ratings",
   },
   {
-    image : "/RyanClient.webp",
-    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name : "Ryan Flaherty",
-    pic : "/stars.svg",
-    rating : "4.9 Ratings",
+    image: "/RyanClient.webp",
+    text:
+      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name: "Ryan Flaherty",
+    pic: "/stars.svg",
+    rating: "4.9 Ratings",
   },
   {
-    image : "/RyanClient.webp",
-    text : "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name : "Ryan Flaherty",
-    pic : "/stars.svg",
-    rating : "4.9 Ratings",
+    image: "/RyanClient.webp",
+    text:
+      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
+    name: "Ryan Flaherty",
+    pic: "/stars.svg",
+    rating: "4.9 Ratings",
   },
-  
-]
+];
 export default function Home() {
   return (
     <main className="bg-black">
@@ -88,113 +99,25 @@ export default function Home() {
               your wildest expectations!
             </p>
           </div>
-          <div className=" grid grid-cols-4 text-white gap-6">
-            <div className=" rounded-2xl bg-zinc-900 hover:bg-zinc-700">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid1.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
+          <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 text-white">
+            {
+               cardDescription.map((card, index)=>(
+                <Card 
+                key={index}
+                imageSrc={card.imageSrc}
+                imageAlt={card.imageAlt}
+                title={card.title}
+                description={
                 <span className="line-clamp-[10]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android. Our approach ensures your
-                  app stands out in a crowded marketplace, driving growth and
-                  user loyalty with every interaction. From initial concept to
-                  final launch, we're with you every step of the way, making
-                  sure your mobile app exceeds expectations.
+                {card.description}
                 </span>
-              </div>
-            </div>
-
-            <div className=" rounded-2xl bg-zinc-900 hover:bg-zinc-700">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid2.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[10]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android. Our approach ensures your
-                  app stands out in a crowded marketplace, driving growth and
-                  user loyalty with every interaction. From initial concept to
-                  final launch, we're with you every step of the way, making
-                  sure your mobile app exceeds expectations.
-                </span>
-              </div>
-            </div>
-            <div className=" rounded-2xl bg-zinc-900 hover:bg-zinc-700">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid3.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[10]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android. Our approach ensures your
-                  app stands out in a crowded marketplace, driving growth and
-                  user loyalty with every interaction. From initial concept to
-                  final launch, we're with you every step of the way, making
-                  sure your mobile app exceeds expectations.
-                </span>
-              </div>
-            </div>
-            <div className=" rounded-2xl bg-zinc-900 hover:bg-zinc-700">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid4.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[10]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android. Our approach ensures your
-                  app stands out in a crowded marketplace, driving growth and
-                  user loyalty with every interaction. From initial concept to
-                  final launch, we're with you every step of the way, making
-                  sure your mobile app exceeds expectations.
-                </span>
-              </div>
-            </div>
+                }
+                />
+              ))
+            }
           </div>
           <div className="flex justify-center mt-10 pb-10">
-            <button className="text-white bg-useclass px-4 py-3 rounded-lg font-semibold text-lg">
-              View all services
-            </button>
+           <Button text="View all Services"/>
           </div>
         </div>
       </section>
@@ -268,10 +191,8 @@ export default function Home() {
                   surprise our clients with it!
                 </p>
               </span>
-              <Link href={""}>
-                <button className="bg-useclass mt-5 px-4 py-3 font-bold text-base text-white rounded-lg">
-                  Contact Us
-                </button>
+              <Link href={"/"}>
+              <Button text="Contact Us"/>
               </Link>
             </div>
           </div>
@@ -288,139 +209,25 @@ export default function Home() {
             Our services are tailor-made and we are always striving to surpass
             your wildest expectations!
           </p>
-
-          <div className="grid grid-cols-3 text-white gap-6 mt-10 ">
-            <div className="rounded-2xl min-h-[24rem] bg-black hover:bg-zinc-900 hover:border">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid1.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[7]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android.
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
+            {
+               cardDescription1.map((card, index)=>(
+                <Card 
+                key={index}
+                imageSrc={card.imageSrc}
+                imageAlt={card.imageAlt}
+                title={card.title}
+                description={
+                <span className="line-clamp-6 mb-4">
+                  {card.description}
                 </span>
-              </div>
-            </div>
-            <div className="rounded-2xl min-h-[24rem] bg-black hover:bg-zinc-900 hover:border">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid1.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[7]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android.
-                </span>
-              </div>
-            </div>
-            <div className="rounded-2xl min-h-[24rem] bg-black hover:bg-zinc-900 hover:border">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid1.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[7]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android.
-                </span>
-              </div>
-            </div>
-            <div className="rounded-2xl min-h-[24rem] bg-black hover:bg-zinc-900 hover:border">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid1.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[7]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android.
-                </span>
-              </div>
-            </div>
-            <div className="rounded-2xl min-h-[24rem] bg-black hover:bg-zinc-900 hover:border">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid1.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[7]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android.
-                </span>
-              </div>
-            </div>
-            <div className="rounded-2xl min-h-[24rem] bg-black hover:bg-zinc-900 hover:border">
-              <Image
-                className="flex mt-4 ml-4"
-                width={40}
-                height={45}
-                src={"/grid1.png"}
-                alt=""
-              ></Image>
-              <div className="  my-5 mx-4 overflow-hidden">
-                <h6 className="text-xl font-semibold mb-8 ml-1">
-                  Tailored Mobile
-                </h6>
-                <span className="line-clamp-[7]">
-                  In a digital-first world, our tailored mobile app solutions
-                  are your gateway to engaging your audience like never before.
-                  We combine cutting-edge technology with user-centric design to
-                  create apps that not only look great but also perform
-                  flawlessly across iOS and Android.
-                </span>
-              </div>
-            </div>
+                 }
+                />
+              ))
+            }
           </div>
           <div className="flex justify-center mt-10 pb-10">
-            <button className="text-white bg-useclass px-4 py-3 rounded-lg font-semibold text-lg">
-              View all industries
-            </button>
+               <Button text="View all Industries"/>
           </div>
         </div>
       </section>
@@ -505,17 +312,15 @@ export default function Home() {
       </section>
       <section className="bg-zinc-900 py-10">
         <Swiper
+         modules={[Navigation, Autoplay]}
           slidesPerView={4} // Show 4 slides at a time
           spaceBetween={10} // Adjust space between slides
-          loop={true} // Enable infinite loop
           allowTouchMove={false} // Disable manual sliding
+          loop
           autoplay={{
-            delay: 0, // Continuous autoplay with no pause
-            disableOnInteraction: false, // Prevent stopping on interaction
+            delay: 0, 
           }}
-          speed={5000} // Transition speed in milliseconds (5 seconds for a full loop)
-          loopAdditionalSlides={5} // Preload additional slides for a smoother loop
-          modules={[Navigation, Autoplay]} // Enable Navigation and Autoplay modules
+        speed={5000}
           className="mySwiper"
         >
           <SwiperSlide>
@@ -580,8 +385,8 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
       </section>
-      <section className=" bg-zinc-950 ">
-        <div className="container m-auto max-w-screen-sm py-7">
+      <section className="  py-20">
+        <div className="container m-auto max-w-screen-sm">
           <div className="flex justify-center gap-3">
             <h3 className="useclass text-4xl font-bold">Our</h3>
             <h3 className="text-white text-4xl font-bold">Testimonials</h3>
@@ -592,155 +397,110 @@ export default function Home() {
             to write their journey and success stories with us.
           </p>
         </div>
+        <section className=" flex justify-center items-cente pt-8">
+        <Swiper
+        modules={[Navigation, Pagination,Autoplay]}
+          spaceBetween={60} // Har card ke beech ka gap
+          slidesPerView={3} // Ek time par dikhne wale slides
+          navigation={true}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          loop
+          autoplay={{
+            delay: 2000, 
+          }}
+          
+          style={
+            {
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            } as React.CSSProperties
+          }
+          className="w-[65%]" // Swiper width
+        >
+          {cards.map((card, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex flex-col items-center text-center bg-black text-white rounded-lg p-6 shadow-lg border"
+            >
+              <Image
+                src={card.image}
+                alt={card.image}
+                width={150}
+                height={0}
+                className="rounded-full object-cover"
+              />
+
+              <p className="overflow-hidden text-left text-ellipsis line-clamp-6 py-6 text-stone-400">
+                {card.text}
+              </p>
+              <h3 className="text-lg font-bold flex ">{card.name}</h3>
+              <div className="">
+                <Image
+                  className="py-4"
+                  src={card.pic}
+                  alt="stars"
+                  width={60}
+                  height={50}
+                />
+                <span className="flex  pb-6">{card.rating}</span>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
-      <section className="bg-zinc-900">
+      </section>
+      <section className="bg-zinc-900 py-7">
         <div className="container m-auto max-w-screen-lg ">
-        <div>
-          <div className="my-16">
-            <div className="flex justify-center gap-3">
-              <h2 className=" text-4xl text-white font-semibold">Recent</h2>
-              <h2 className="text-4xl useclass font-semibold"> News Letter</h2>
-            </div>
-            <p className="text-center text-stone-400 mt-3 m-auto max-w-screen-sm">
-              Uncover industry trends, insights, and innovative ideas. Our blog
-              posts are crafted to keep you informed, inspired, and ahead in
-              your professional journey. Dive in now!
-            </p>
-          </div>
-          <div className=" grid grid-cols-3 text-white gap-6">
-            <div className="rounded-2xl bg-black">
-              <Image
-                className="flex rounded-t-2xl"
-                width={1000}
-                height={200}
-                src={"/1.png"}
-                alt=""
-              ></Image>
-              <div className="hover:bg-zinc-800">
-                <div className="  my-5 mx-4 overflow-hidden  ">
-                  <h6 className="text-xl font-semibold mb-8 ml-1 line-clamp-2 ">
-                    Tailored Custom Software Development Solutions for Your
-                    Unique Needs
-                  </h6>
-                  <span className="line-clamp-6 ">
-                    Every business has unique challenges and requirements, which
-                    is why we offer custom software development services at
-                    ConceptRecall. Our team of experts works closely with you to
-                    understand your specific needs and develop software
-                    solutions that address them.
-                  </span>
-                  <div
-                    className="flex justify-between py-3
-"
-                  >
-                    <span className="useclass">Get more Info</span>
-                    <Image
-                      className=""
-                      src={"/arrowright.svg"}
-                      width={20}
-                      height={20}
-                      alt=""
-                    ></Image>
-                  </div>
-                </div>
+          <div>
+            <div className="my-16">
+              <div className="flex justify-center gap-3">
+                <h2 className=" text-4xl text-white font-semibold">Recent</h2>
+                <h2 className="text-4xl useclass font-semibold">
+                  {" "}
+                  News Letter
+                </h2>
               </div>
+              <p className="text-center text-stone-400 mt-3 m-auto max-w-screen-sm">
+                Uncover industry trends, insights, and innovative ideas. Our
+                blog posts are crafted to keep you informed, inspired, and ahead
+                in your professional journey. Dive in now!
+              </p>
             </div>
-            <div className="rounded-2xl bg-black">
-              <Image
-                className="flex rounded-t-2xl w-full h-[43%]"
-                width={1000}
-                height={200}
-                src={"/2.png"}
-                alt=""
-              ></Image>
-              <div className="hover:bg-zinc-800">
-                <div className="  my-5 mx-4 overflow-hidden  ">
-                  <h6 className="text-xl font-semibold mb-8 ml-1 line-clamp-2 ">
-                    A Game-Changing Partnership Between ConceptRecall and IIFYMc
-                  </h6>
-                  <span className="line-clamp-6 ">
-                    ConceptRecall is excited to announce a new venture with
-                    IIFYM (If It Fits Your Macros) to develop a cutting-edge
-                    meal-planning app. This collaboration aims to bring users a
-                    seamless experience through mobile and web platforms.
-                  </span>
-                  <div
-                    className="flex justify-between py-3
-"
-                  >
-                    <span className="useclass">Get more Info</span>
-                    <Image
-                      className=""
-                      src={"/arrowright.svg"}
-                      width={20}
-                      height={20}
-                      alt=""
-                    ></Image>
-                  </div>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
+            {
+                  cardDescription3.map((card, index) => (
+            <ImageCard
+                   key={index}
+                   imageSrc={card.imageSrc}
+                   imageAlt={card.imageAlt}
+                   title={card.title}
+                   description={card.description}
+                   linkText={card.linkText}
+                   svgIco={card.svgIco}  // Change this to match the interface
+                />
+              ))
+              }               
             </div>
-            <div className="rounded-2xl bg-black">
-              <Image
-                className="flex rounded-t-2xl w-full h-[43%]"
-                width={1000}
-                height={200}
-                src={"/3.png"}
-                alt=""
-              ></Image>
-              <div className="hover:bg-zinc-800">
-                <div className="  my-5 mx-4 overflow-hidden  ">
-                  <h6 className="text-xl font-semibold mb-8 ml-1 line-clamp-2 ">
-                    Tailored Custom Software Development Solutions for Your
-                    Unique Needs
-                  </h6>
-                  <span className="line-clamp-6 ">
-                    Every business has unique challenges and requirements, which
-                    is why we offer custom software development services at
-                    ConceptRecall. Our team of experts works closely with you to
-                    understand your specific needs and develop software
-                    solutions that address them.
-                  </span>
-                  <div className="flex justify-between py-3">
-                    <span className="useclass">Get more Info</span>
-
-                    <Image
-                      className=""
-                      src={"/arrowright.svg"}
-                      width={20}
-                      height={20}
-                      alt=""
-                    ></Image>
-                  </div>
-                </div>
-              </div>
+            <div className="flex justify-center mt-10 pb-10">
+              <Button text="View all Blogs"/>
+              {}
             </div>
           </div>
-          <div className="flex justify-center mt-10 pb-10">
-            <button className="text-white bg-useclass px-4 py-3 rounded-lg font-semibold text-lg">
-              View all Blogs
-            </button>
-          </div>
-        </div>
         </div>
       </section>
-
-      <section className="min-h-screen flex justify-center items-center ">
-        <div className="grid grid-cols-5  ">
-        {cards.map((card , index) =>(
-          <div key={index} className="bg-gray-800 text-white rounded-lg p-6 shadow-lg">
-            <Image src={card.image} alt={card.image} width={80} height={80} className="rounded-full mb-4"/>
-            <h3>{card.name}</h3>
-            <p className="mb-4">{card.text}</p>
-            <div>
-
-              
-              <Image src={card.pic} alt="stars" width={50} height={50}/>
-              <span className="mt-2 font-bold">{card.rating}</span>
-            </div>
-          </div>
-        ))}
+      <section className="py-10">
+        <div className="flex gap-3 justify-center">
+          <h2 className="text-4xl useclass font-bold">Contact</h2>
+          <h2 className="text-4xl text-white font-semibold">Us</h2>
         </div>
+        <div>
+          <form action="">
+          
+          </form>
+        </div>
+        <div></div>
+
       </section>
     </main>
   );
