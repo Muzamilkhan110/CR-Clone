@@ -13,49 +13,10 @@ import { cardDescription} from "@/app/data/first/page"
 import { cardDescription1 } from "@/app/data/second/page"
 import ImageCard from "@/components/imagecard/Image-Card";
 import { cardDescription3 } from "./data/third/page";
+import SliderCard from "@/components/slidercards/SliderCard";
+import { cardDescription4 } from "./data/fourth/page"
 
-const cards = [
-  {
-    image: "/RyanClient.webp",
-    text:
-      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name: "Ryan Flaherty",
-    pic: "/stars.svg",
-    rating: "4.9 Ratings",
-  },
-  {
-    image: "/RyanClient.webp",
-    text:
-      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name: "Ryan Flaherty",
-    pic: "/stars.svg",
-    rating: "4.9 Ratings",
-  },
-  {
-    image: "/RyanClient.webp",
-    text:
-      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name: "Ryan Flaherty",
-    pic: "/stars.svg",
-    rating: "4.9 Ratings",
-  },
-  {
-    image: "/RyanClient.webp",
-    text:
-      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name: "Ryan Flaherty",
-    pic: "/stars.svg",
-    rating: "4.9 Ratings",
-  },
-  {
-    image: "/RyanClient.webp",
-    text:
-      "ConceptRecall is on top of their tasks always and hungry to work. A great resource and highly recommended team.",
-    name: "Ryan Flaherty",
-    pic: "/stars.svg",
-    rating: "4.9 Ratings",
-  },
-];
+
 export default function Home() {
   return (
     <main className="bg-black">
@@ -385,7 +346,7 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
       </section>
-      <section className="  py-20">
+      <section className="my-20">
         <div className="container m-auto max-w-screen-sm">
           <div className="flex justify-center gap-3">
             <h3 className="useclass text-4xl font-bold">Our</h3>
@@ -397,59 +358,42 @@ export default function Home() {
             to write their journey and success stories with us.
           </p>
         </div>
-        <section className=" flex justify-center items-cente pt-8">
-        <Swiper
-        modules={[Navigation, Pagination,Autoplay]}
-          spaceBetween={60} // Har card ke beech ka gap
-          slidesPerView={3} // Ek time par dikhne wale slides
-          navigation={true}
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          loop
-          autoplay={{
-            delay: 2000, 
-          }}
-          
-          style={
-            {
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            } as React.CSSProperties
-          }
-          className="w-[65%]" // Swiper width
-        >
-          {cards.map((card, index) => (
-            <SwiperSlide
-              key={index}
-              className="flex flex-col items-center text-center bg-black text-white rounded-lg p-6 shadow-lg border"
-            >
-              <Image
-                src={card.image}
-                alt={card.image}
-                width={150}
-                height={0}
-                className="rounded-full object-cover"
-              />
+        
+  
 
-              <p className="overflow-hidden text-left text-ellipsis line-clamp-6 py-6 text-stone-400">
-                {card.text}
-              </p>
-              <h3 className="text-lg font-bold flex ">{card.name}</h3>
-              <div className="">
-                <Image
-                  className="py-4"
-                  src={card.pic}
-                  alt="stars"
-                  width={60}
-                  height={50}
-                />
-                <span className="flex  pb-6">{card.rating}</span>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
-      </section>
+  <Swiper
+    modules={[Navigation, Pagination, Autoplay]}
+    spaceBetween={60}
+    slidesPerView={3}
+    navigation={true}
+    pagination={{ clickable: true }}
+    scrollbar={{ draggable: true }}
+    loop
+    autoplay={{
+      delay: 2000,
+    }}
+    style={
+      {
+        "--swiper-navigation-color": "#fff",
+        "--swiper-pagination-color": "#fff",
+      } as React.CSSProperties
+    }
+    className="w-[65%]"
+  >
+    {cardDescription4.map((card, index) => (
+      <SwiperSlide key={index}>
+        <SliderCard
+          imageSrc={card.imageSrc}
+          imageAlt={card.imageAlt}
+          description={card.description}
+          heading={card.heading}
+          svgIcon={card.svgIcon}
+          rating={card.rating}
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+  </section>
       <section className="bg-zinc-900 py-7">
         <div className="container m-auto max-w-screen-lg ">
           <div>

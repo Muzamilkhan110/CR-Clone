@@ -10,7 +10,7 @@ function Header() {
     <header className="bg-black">
       <nav className="container mx-auto flex justify-around items-center  h-[82px] px-8"> 
         <Logo/>
-        <div>
+        <div className="lg:z-0">
           <ul className="flex gap-7 text-white text-[16px] font-semibold">
             <li className="hover:useclass"><Link href="/">Home</Link></li>
             <li className="hover:useclass"><Link href="/about">About Us</Link></li>

@@ -26,6 +26,9 @@ export default {
   ],
   theme: {
     extend: {
+      borderWidth:{
+        '0.5':'0.5px',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
