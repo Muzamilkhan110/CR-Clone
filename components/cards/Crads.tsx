@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({
     } 
      
     return (
-      <div
+      <div 
       className=" rounded-2xl bg-zinc-900 hover:bg-zinc-700" 
       onClick={handleClick}
       >

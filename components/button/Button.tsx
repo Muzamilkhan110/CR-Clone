@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> =({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={ `bg-useclass sm: text-center text-white px-6 py-3 rounded-xl text-[16px] font-semibold
+      className={ `bg-useclass sm:px-6 sm:py-3 text-center text-white px-6 py-3 rounded-xl text-[16px] font-semibold
       } ${className}`}
     >
       {text}

@@ -34,38 +34,3 @@ const SliderCard:React.FC<SliderCardProps> = ({
 )}
 export default SliderCard
 
-// import Image from "next/image";
-
-// interface SliderCardProps {
-//   imageSrc: string;
-//   imageAlt: string;
-//   description: string;
-//   heading: string;
-//   svgIcon: string | React.ReactNode;
-//   rating: string;
-// }
-
-// const SliderCard: React.FC<SliderCardProps> = ({
-//   imageSrc,
-//   imageAlt,
-//   description,
-//   heading,
-//   svgIcon,
-//   rating,
-// }) => {
-//   return (
-//     <div className="flex justify-center items-center pt-8">
-//       <Image src={imageSrc} alt={imageAlt} width={30} height={30} />
-//       <p>{description}</p>
-//       <h2>{heading}</h2>
-//       {typeof svgIcon === "string" ? (
-//         <Image src={svgIcon} alt={imageAlt} width={30} height={30} />
-//       ) : (
-//         svgIcon
-//       )}
-//       <div>{rating}</div>
-//     </div>
-//   );
-// };
-
-// export default SliderCard;
