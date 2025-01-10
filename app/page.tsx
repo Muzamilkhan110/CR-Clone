@@ -19,7 +19,8 @@ import OverView from "@/components/overview/Overview";
 import Project from "@/components/projectSlider/Project";
 import SectionSlider from "./section-slider/page";
 import Heading from "@/components/heading/Heading";
-import Head from "next/head";
+import Label from "@/components/label/Label";
+
 
 export default function Home() {
   return (
@@ -157,7 +158,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Project />
+      <Project projects={[]}  />
       <SectionSlider />
       <section className="my-20">
         <div className="container m-auto max-w-screen-sm">
@@ -239,7 +240,7 @@ export default function Home() {
       </section>
       <section className="py-10">
         <Heading dynamic="Us" tittle="Contact" />
-
+        <div><Label text="" id={""} label={""} type={""} /></div>
       </section>
     </main>
   );
