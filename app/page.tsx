@@ -19,7 +19,8 @@ import OverView from "@/components/overview/Overview";
 import Project from "@/components/projectSlider/Project";
 import SectionSlider from "./section-slider/page";
 import Heading from "@/components/heading/Heading";
-import Label from "@/components/label/Label";
+import FormWithGrid from "@/components/label/Label";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 export default function Home() {
@@ -240,7 +241,7 @@ export default function Home() {
       </section>
       <section className="py-10">
         <Heading dynamic="Us" tittle="Contact" />
-        <div><Label text="" id={""} label={""} type={""} /></div>
+        <div><FormWithGrid /></div>
       </section>
     </main>
   );
