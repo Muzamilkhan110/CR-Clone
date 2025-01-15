@@ -4,10 +4,6 @@ export const sectSlider = [
         imageAlt:"image"
     },
     {
-        imagesSrc:"/client2.webp",
-        imageAlt:"image"
-    },
-    {
         imageSrc:"/client3.webp",
         imageAlt:"image"
     },
@@ -21,6 +17,10 @@ export const sectSlider = [
     },
     {
         imageSrc:"/client6.webp",
+        imageAlt:"image"
+    },
+    {
+        imageSrc:"/client4.webp",
         imageAlt:"image"
     },
    

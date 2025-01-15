@@ -47,29 +47,43 @@ const Footer: React.FC = () => {
           <ul className="space-y-4">
             {/* Phone */}
             <li className="flex flex-col  cursor-pointer">
-            <div className="">
+              <div className="">
                 <h1 className="font-bold">Phone No:</h1>
-               <Link href={"tel:+923167856990"} className=" text-white hover:useclass cursor-pointer">
-               (+92) 316 7856 990
-               </Link>
+                <Link
+                  href={"tel:+923167856990"}
+                  className=" text-white hover:useclass cursor-pointer"
+                >
+                  (+92) 316 7856 990
+                </Link>
               </div>
             </li>
             {/* Email */}
             <li className="flex flex-col  cursor-pointer">
               <div className="">
                 <h1 className="font-bold">Email:</h1>
-               <Link href={"mailto:info@conceptrecall.com"} target="_blank" className=" text-white hover:useclass cursor-pointer">
-                 info@conceptrecall.com
-               </Link>
+                <Link
+                  href={"mailto:info@conceptrecall.com"}
+                  target="_blank"
+                  className=" text-white hover:useclass cursor-pointer"
+                >
+                  info@conceptrecall.com
+                </Link>
               </div>
             </li>
             {/* Address */}
             <li className="flex flex-col  cursor-pointer">
-            <div className="">
+              <div className="">
                 <h1 className="font-bold">Address:</h1>
-               <Link href={"https://www.google.com/maps/place/Concept+Recall/@24.9126989,67.1001207,19z/data=!4m6!3m5!1s0x3eb33e9c0fc552eb:0x9d883c6a5bed576a!8m2!3d24.912541!4d67.1004498!16s%2Fg%2F11gdkk5wpn?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D"} target="_blank" className=" text-white hover:useclass cursor-pointer">
-                  B-219, Block 10 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh 75300
-               </Link>
+                <Link
+                  href={
+                    "https://www.google.com/maps/place/Concept+Recall/@24.9126989,67.1001207,19z/data=!4m6!3m5!1s0x3eb33e9c0fc552eb:0x9d883c6a5bed576a!8m2!3d24.912541!4d67.1004498!16s%2Fg%2F11gdkk5wpn?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D"
+                  }
+                  target="_blank"
+                  className=" text-white hover:useclass cursor-pointer"
+                >
+                  B-219, Block 10 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh
+                  75300
+                </Link>
               </div>
             </li>
           </ul>
@@ -80,13 +94,13 @@ const Footer: React.FC = () => {
           <p className="my-4 text-lg text-white">
             Stay in tune for the latest news from Concept Recall
           </p>
-          <div className="flex items-center">
+          <div className="w-[100%]">
             <input
               type="email"
               placeholder="Enter your Email Address"
               className="w-full p-5 rounded-l-md bg-transparent border focus:outline-none focus:ring-0 text-neutral-600 "
             />
-            <Button className="relative right-20" text="Submit" />
+            <Button className="relative" text="Submit" />
           </div>
         </div>
       </div>

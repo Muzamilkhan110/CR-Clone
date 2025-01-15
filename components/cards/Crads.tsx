@@ -20,7 +20,6 @@ const Card: React.FC<CardProps> = ({
 }) =>  {
     const router = useRouter
     const handleClick = () =>{
-        // router.push(link)
     } 
      
     return (
@@ -28,8 +27,8 @@ const Card: React.FC<CardProps> = ({
       className=" rounded-2xl bg-zinc-900 hover:bg-zinc-700" 
       onClick={handleClick}
       >
-      <Image className='flex mt-4 ml-4' src={imageSrc} width={40} height={40} alt={imageAlt}>
-      </Image>
+      <Image className='flex mt-4 ml-4 h-auto' src={imageSrc} width={40} height={40} alt={imageAlt} />
+      
       <div className=' my-5 mx-4 overflow-hidden'>
         <h2 className='text-xl font-semibold mb-8 ml-1'>{title}</h2>
         <p className=''>{description}</p>

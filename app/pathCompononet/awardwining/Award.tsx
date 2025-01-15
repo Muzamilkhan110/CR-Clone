@@ -10,12 +10,12 @@ const Award = () => {
     return(
         <section className="container m-auto max-w-screen-lg">
         <div>
-          <div className="my-16">
+          <div className="my-16 px-4 sm:px-6 md:px-8">
           <Heading tittle="Award-winning" dynamic=" Services we provide" />
-            <p className="text-center text-stone-400 mt-3">
+            <p className="text-center text-stone-400 mt-3 text-sm sm:text-base md:text-lg">
               Our services are tailor-made and we are always striving to surpass
               your wildest expectations!
-            </p>
+            </p> 
           </div>
           <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 text-white">
             {
