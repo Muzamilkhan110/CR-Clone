@@ -11,7 +11,7 @@ const FormWithGrid = () => {
     { id: "phone", label: "Phone", required: true },
     { id: "address", label: "Address", required: false },
     { id: "city", label: "City", required: false },
-    { id: "notes", label: "Additional Notes", required: true, fullWidth: true },
+    { id: "notes", label: "Message", required: true, fullWidth: true },
   ];
 
   return (

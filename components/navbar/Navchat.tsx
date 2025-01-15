@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Logo from "@/components/Logo/Logo";
-import Button from "./button/Button";
+import Button from "../button/Button";
 
 
 function Header() {

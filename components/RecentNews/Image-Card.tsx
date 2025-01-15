@@ -21,7 +21,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
 }) =>{
   return (
     <div className="rounded-2xl bg-black container">
-        <Image className="flex rounded-t-2xl"  width={1000} height={100} src={imageSrc} alt={imageAlt} ></Image>
+        <Image className="flex h-[35vh] rounded-t-2xl"  width={1000} height={0} src={imageSrc} alt={imageAlt} ></Image>
         <div className=" my-5 mx-4 overflow-hidden">
         <div className="">
             <h2 className="text-xl font-semibold  line-clamp-2 ">{title}</h2>

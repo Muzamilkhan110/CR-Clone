@@ -19,7 +19,7 @@ interface ProjectProps {
 }
 const Project: React.FC<ProjectProps> = ({ projects }) => {
   return (
-    <div className="container m-auto max-w-screen-lg">
+    <div className="container m-auto max-w-screen-lg my-20">
       <span className="py-20">
         <Swiper
           className="mySwiper"
@@ -31,8 +31,7 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
           }}
           speed={700}
           loop={true}
-          pagination={{ clickable: true }}
-          navigation={true}
+          pagination={false}
           modules={[Navigation, Pagination, Autoplay]}
         >
           {projectSlide.map((item: any, index) => (
