@@ -7,8 +7,9 @@ const Industries = () =>{
     return (
 <section className=" bg-zinc-950 ">
         <div className="container m-auto max-w-screen-lg py-7">
+          <div className="px-[7%]">
           <Heading tittle="Industries we've" dynamic="excelled in" />
-          <p className="text-stone-400 text-center my-4 px-[20rem]">
+          <p className="text-stone-400 text-center my-4">
             Our services are tailor-made and we are always striving to surpass
             your wildest expectations!
           </p>
@@ -31,6 +32,7 @@ const Industries = () =>{
           </div>
           <div className="flex justify-center mt-10 pb-10">
                <Button text="View all Industries"/>
+          </div>
           </div>
         </div>
       </section>

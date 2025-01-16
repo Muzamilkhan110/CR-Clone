@@ -19,8 +19,8 @@ interface ProjectProps {
 }
 const Project: React.FC<ProjectProps> = ({ projects }) => {
   return (
-    <div className="container m-auto max-w-screen-lg my-20">
-      <span className="py-20">
+    <div className="container m-auto my-20">
+      <div className="py-20 px-[7%]">
         <Swiper
           className="mySwiper"
           spaceBetween={10}
@@ -36,8 +36,8 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
         >
           {projectSlide.map((item: any, index) => (
             <SwiperSlide key={index} className="flex items-center gap-10 ">
-              <div className="flex">
-                <div className="">
+              <div className="flex flex-col-reverse gap-2 lg:flex-row ">
+                <div className="flex justify-center">
                   <Image
                     src={item.imageSrc}
                     width={500}
@@ -46,16 +46,16 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
                     className="rounded-lg"
                   />
                 </div>
-                <div className="bg-zinc-900 max-w-[35rem] rounded-2xl text-white pt-10 pb-10 px-6 shadow-lg">
-                  <span className="text-3xl font-bold">{item.title}</span>
+                <div className="bg-zinc-900 rounded-2xl text-white pt-10 pb-10 px-6 shadow-lg">
+                  <div className="text-3xl font-bold">{item.title}</div>
                   <p className="my-6">{item.description}</p>
-                  <Button text="Contact Us" />
+                  <Button text="View Case Study" />
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </span>
+      </div>
     </div>
   );
 };

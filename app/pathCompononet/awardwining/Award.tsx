@@ -9,10 +9,10 @@ import Image from "next/image";
 const Award = () => {
     return(
         <section className="container m-auto max-w-screen-lg">
-        <div className="px-[7%]">
+        <div className="">
           <div className="py-[7%]">
           <Heading tittle="Award-winning" dynamic=" Services we provide" />
-            <p className="text-center pt-3 lg:px-[15%] text-stone-400 mt-2 text-sm sm:text-base md:text-lg">
+            <p className="text-center px-[2%] pt-3 lg:px-[15%] text-stone-400 mt-2 text-sm sm:text-base md:text-lg">
               Our services are tailor-made and we are always striving to surpass
               your wildest expectations!
             </p> 
@@ -26,7 +26,7 @@ const Award = () => {
                 imageAlt={card.imageAlt}
                 title={card.title}
                 description={
-                <span className="line-clamp-[5] lg:line-clamp-[8]">
+                <span className="line-clamp-[5] lg:line-clamp-[10]">
                 {card.description}
                 </span>
                 }

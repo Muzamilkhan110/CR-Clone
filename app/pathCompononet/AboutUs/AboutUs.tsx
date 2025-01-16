@@ -5,39 +5,30 @@ import Link from "next/link";
 import Button from "@/components/button/Button";
 const AboutUS = () =>{
     return(
-        <section className="min-h-screen flex justify-center items-center">
-        <div className="container m-auto max-w-screen-lg">
-          <div className="py-10">
+      <section className="flex justify-center items-center">
+          <div className="container mx-auto">
+          <div className="px-[16%] py-12">
+          <div className="">
             <Heading tittle="About" dynamic="Us"/>
-            <p className="text-center text-stone-400 mt-3">
+            <p className="text-center text-stone-400 py-8 ">
               We are a team of seasoned creators who upgrade your business
               processes with modern technology and advancements. And well, these
               numbers speak volumes about what we have achieved on our journey
               so far.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-6 pb-10">
-            <div className="max-w- overflow-hidden rounded-xl">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="lg:w-1/2 h-full overflow-hidden rounded-xl">
               <video
-                className="w-full h-full object-cover"
+                className=" object-cover"
                 autoPlay
                 loop
                 src="/player1.mp4"
               >
                 Your browser does not support the video tag.
               </video>
-              <div className=" flex items-center justify-center">
-                <Image
-                  className=""
-                  width={"100"}
-                  height={"100"}
-                  src={"/play.svg"}
-                  alt=""
-                />
-              </div>
             </div>
-
-            <div className=" font-medium text-stone-400 pt-20">
+             <div className="lg:w-1/2 font-normal text-stone-400 flex flex-col justify-center">
               <div className="">
                 <p>
                   We believe in surpassing expectations and satisfying our
@@ -49,11 +40,13 @@ const AboutUS = () =>{
                 </p>
               </div>
               <Link href={"/"}>
-              <Button className="mt-4" text="Contact Us"/>
+              <Button className="my-3" text="Contact Us"/>
               </Link>
             </div>
           </div>
+          </div> 
         </div>
+        
       </section>
     )
 }

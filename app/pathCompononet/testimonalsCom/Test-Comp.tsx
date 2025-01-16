@@ -9,8 +9,8 @@ import { cardDescription4 } from "@/app/data/clientreviews/page";
 import SliderCard from "@/components/Testimonals/SliderCard";
 const TestComp = () => {
   return (
-    <section className="my-20">
-      <div className="container m-auto max-w-screen-sm">
+    <section className="container m-auto my-20">
+      <div className="px-[7%]">
         <Heading tittle="Our" dynamic="Testimonials" />
         <p className="text-stone-400 text-center my-4 ">
           Having a satisfied clientele that appreciates our work is a milestone
@@ -22,7 +22,21 @@ const TestComp = () => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={60}
-        slidesPerView={3}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            navigation: {
+              enabled: true,
+            },
+                            // Show 1 slide on very small screens
+          },
+          768: {
+            slidesPerView: 2, // Show 2 slides on medium screens (e.g., tablets)
+          },
+          1280: {
+            slidesPerView: 3, // Show 3 slides on larger screens
+          },
+        }}
         navigation={true}
         scrollbar={{ draggable: true }}
         loop
@@ -38,7 +52,7 @@ const TestComp = () => {
         className="w-[65%]"
       >
         {cardDescription4.map((card, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="md:">
             <SliderCard
               imageSrc={card.imageSrc}
               imageAlt={card.imageAlt}
