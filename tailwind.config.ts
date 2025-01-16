@@ -40,10 +40,10 @@ export default {
         '200': "200% 200%", // Double the background size for smooth animation
       },
       animation: {
-        gradient: "gradient 2s infinite", // Gradient animation
+        gradient:" gradient1 2s infinite", // Gradient animation
       },
       keyframes: {
-        gradient: {
+        gradient1: {
           "0%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },

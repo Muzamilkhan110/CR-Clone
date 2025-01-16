@@ -14,9 +14,9 @@ const Heading:React.FC<HeadingProps> = ({
     return(
     
                 <div className="text-center">
-                <div className="flex justify-center gap-3">
-                <h1 className=" text-4xl text-white font-bold">{tittle}</h1>
-                <p className="text-4xl useclass font-bold">{dynamic}</p>
+                <div className="flex justify-center gap-1 flex-wrap sm:flex-row">
+                <h1 className="text-xl sm:text-2xl md:text-4xl  text-white font-bold">{tittle}</h1>
+                <p className="text-xl sm:text-2xl md:text-4xl useclass font-bold">{dynamic}</p>
                 </div>
                 </div>
           

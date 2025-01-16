@@ -1,3 +1,4 @@
+
 "use client";
 import Link from "next/link";
 import React from "react";
@@ -13,12 +14,12 @@ const Header = () => {
   };
   return (
     <header className="bg-black">
-      <nav className="container mx-auto flex justify-around items-center py-4">
-        <div className="w-[30%] flex justify-center">
+      <nav className="container mx-auto flex lg:justify-around items-center py-4">
+        <div className="lg:flex lg:justify-end">
           <Logo />
         </div>
-        <div className="w-[60%] lg:z-0 flex justify-center">
-          <ul className="flex gap-8 items-center text-white text-base font-semibold">
+        <div className=" flex justify-center">
+          <ul className="flex hidden xl:gap-8 items-center text-white text-base font-semibold lg:gap-4 sm:hidden md:hidden lg:flex">
             <li className="hover:useclass ">
               <Link href="/">Home</Link>
             </li>
@@ -45,16 +46,19 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="w-[10%]">
-          <div className="bg-stone-900 flex items-center gap-2 py-1 px-1 rounded-lg w-[63%]">
+        <div className="hidden lg:block">
+          <div className="bg-stone-900 flex items-center gap-2 py-1 px-1 rounded-lg ">
             <div className="p-2 rounded-lg hover:bg-useclass">
+              <Link href={"https://wa.me/923167856990"}>
               <Image
                 src="/icons8-whatsapp.svg"
                 alt="WhatsApp"
                 width={24}
                 height={24}
               />
+              </Link>
             </div>
+            <Link href={"tel:+923167856990"}>
             <div className="p-2 rounded-lg hover:bg-useclass">
               <Image
                 src="/phone-svgrepo-com.svg"
@@ -63,51 +67,13 @@ const Header = () => {
                 height={24}
               />
             </div>
+            </Link>
           </div>
         </div>
       </nav>
-
-      <div className="lg:hidden flex justify-between items-center p-4 bg-blue-500">
-        <Logo />
-        <button onClick={togglebar} className="text-white text-3xl">
-          ☰
-        </button>
-      </div>
-
-      <div
-        className={`lg:hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-transform duration-300 ease-in-out transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="w-3/4 bg-black text-white  h-full p-6">
-          <Logo />
-          <ul className="text-white text-lg flex flex-col gap-10 ">
-            <li className="hover:useclass">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/about">About Us</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/industries">Industries</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/services">Services</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/casestudy">Case Study</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/feed">Feed</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/careers">Careers</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
     </header>
   );
 };
 
 export default Header;
+
