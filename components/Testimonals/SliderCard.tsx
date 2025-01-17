@@ -20,7 +20,7 @@ const SliderCard:React.FC<SliderCardProps> = ({
     rating
 }) => {
     return (
-        <div className="container ">
+        <div className="">
         <div className="">
         <div className="text-white border-[0.5px] mt-10 px-5">
            <Image className=" flex my-6 rounded-full object-cover" src={imageSrc} alt={imageAlt} width={100} height={100} />

@@ -98,9 +98,11 @@ const Footer: React.FC = () => {
             <input
               type="email"
               placeholder="Enter your Email Address"
-              className="w-full p-5 rounded-l-md bg-transparent border focus:outline-none focus:ring-0 text-neutral-600 "
+              className="w-full p-4 rounded-l-md bg-transparent border focus:outline-none focus:ring-0 text-neutral-600 "
             />
-            <Button className="relative" text="Submit" />
+            <div className="pt-4">
+            <Button text="Submit" />
+            </div>
           </div>
         </div>
       </div>

@@ -15,9 +15,9 @@ const FormWithGrid = () => {
   ];
 
   return (
-    <div className="container">
-    <div className=" flex gap-10 my-10 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex-col md:flex-row">
-      <div className="grid grid-cols-2 gap-4  p-4 w-3/5">
+    <div className="container px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col gap-10 my-10 mx-auto max-w-screen-xl md:flex-row">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 md:w-3/5">
         {fields.map(({ id, label, required, fullWidth }) => (
           <div
             key={id}
@@ -45,13 +45,15 @@ const FormWithGrid = () => {
           </div>
         ))}
       </div>
-      <div className="container w-2/5  ">
+      <div className="w-full md:w-2/5">
       <Details />
+      <div className="flex pl-8">
       <Platform />
+      </div>
       </div>
 
     </div>
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-6">
       <Button  text="Send" />
     </div>
     </div>

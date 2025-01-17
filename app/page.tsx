@@ -26,7 +26,7 @@ export default function Home() {
       <Industries />
       <Project projects={[]}  />
       <SectionSlider />
-      <TestComp />
+      <TestComp /> 
       <RecentNews />
       <section className="py-10">
         <Heading dynamic="Us" tittle="Contact" />

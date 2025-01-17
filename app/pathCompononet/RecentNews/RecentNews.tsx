@@ -6,11 +6,11 @@ import Button from "@/components/button/Button";
 const RecentNews = () =>{
     return (
         <section className="bg-zinc-900 py-7">
-        <div className="container m-auto max-w-screen-lg ">
-          <div>
+        <div className="container m-auto  ">
+          <div className="xl:px-[10%]" >
             <div className="my-16">
               <Heading tittle="Recent" dynamic="News Letter" />
-              <p className="text-center text-stone-400 mt-3 m-auto max-w-screen-sm">
+              <p className="text-center text-stone-400 mt-3 px-[6%]">
                 Uncover industry trends, insights, and innovative ideas. Our
                 blog posts are crafted to keep you informed, inspired, and ahead
                 in your professional journey. Dive in now!

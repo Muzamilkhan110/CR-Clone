@@ -7,7 +7,7 @@ const Industries = () =>{
     return (
 <section className=" bg-zinc-950 ">
         <div className="container m-auto max-w-screen-lg py-7">
-          <div className="px-[7%]">
+          <div className="px-[1%]">
           <Heading tittle="Industries we've" dynamic="excelled in" />
           <p className="text-stone-400 text-center my-4">
             Our services are tailor-made and we are always striving to surpass

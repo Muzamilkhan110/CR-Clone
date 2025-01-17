@@ -11,7 +11,7 @@ const Fbottom = () => {
             { name: "Privacy & Policy", href: "/privacy" },
             { name: "FAQs", href: "/faqs" },
           ].map((link, index) => (
-            <a key={index} href={link.href} className="underline">
+            <a key={index} href={link.href} className="underline hover:useclass">
               {link.name}
             </a>
           ))}

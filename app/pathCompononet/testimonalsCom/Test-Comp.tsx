@@ -52,7 +52,7 @@ const TestComp = () => {
         className="w-[65%]"
       >
         {cardDescription4.map((card, index) => (
-          <SwiperSlide key={index} className="md:">
+          <SwiperSlide key={index} className="">
             <SliderCard
               imageSrc={card.imageSrc}
               imageAlt={card.imageAlt}

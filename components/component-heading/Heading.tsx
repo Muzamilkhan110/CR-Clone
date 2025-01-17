@@ -3,7 +3,7 @@ import React from "react";
 interface HeadingProps{
     tittle?: string;
     dynamic?:string;
-   text?:string;
+    text?:string;
 }
 
 const Heading:React.FC<HeadingProps> = ({
