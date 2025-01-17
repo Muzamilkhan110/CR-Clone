@@ -9,6 +9,7 @@ interface CardProps{
     title: string;
     description:React.ReactNode;
    
+   
 }
 
 const Card: React.FC<CardProps> = ({
@@ -16,6 +17,7 @@ const Card: React.FC<CardProps> = ({
     imageAlt,
     title,
     description,
+  
   
 }) =>  {
     const router = useRouter
@@ -27,11 +29,12 @@ const Card: React.FC<CardProps> = ({
       className=" rounded-2xl bg-zinc-900 hover:bg-zinc-700" 
       onClick={handleClick}
       >
-      <Image className='flex mt-4 ml-4 h-auto' src={imageSrc} width={40} height={40} alt={imageAlt} />
       
-      <div className=' my-5 mx-4 overflow-hidden'>
-        <h2 className='text-xl font-semibold mb-8 ml-1'>{title}</h2>
-        <p className=''>{description}</p>
+      <Image className='flex my-8 ml-4 h-auto' src={imageSrc} width={40} height={40} alt={imageAlt} />
+      
+      <div className='mx-4 overflow-hidden'>
+        <h2 className='text-sm md:text-xl font-semibold  ml-1'>{title}</h2>
+        <p className='my-4 text-xs md:text-base'>{description}</p>
       </div>
       </div>
     

@@ -70,10 +70,10 @@ const OverView =() =>{
             {
                 Details.map((item, index) => (
                     <div key={index} className={`${index < 3 ? "md:border-r" : ""} h-28 p-4`}>
-                    <h3 className="useclass text-4xl font-bold">{index === 3
+                    <h3 className="useclass text-xl md:text-4xl font-bold">{index === 3
                 ? `${counts[index]}M+` // Specific logic for Total Revenue
                 : `${counts[index]}${item.title.endsWith("+") ? "+" : ""}`}</h3>
-                    <p className="text-white text-lg">{item.text}</p>
+                    <p className="text-white text-sm md:text-lg">{item.text}</p>
                     </div>
                 ))
             }

@@ -17,7 +17,7 @@ const FormWithGrid = () => {
   return (
     <div className="container px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col gap-10 my-10 mx-auto max-w-screen-xl md:flex-row">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 md:w-3/5">
+      <div className="md:grid grid-cols-2 gap-4 p-4 md:w-3/5">
         {fields.map(({ id, label, required, fullWidth }) => (
           <div
             key={id}
@@ -38,25 +38,26 @@ const FormWithGrid = () => {
             ) : (
               <textarea
                 id="notes"
-                rows={5}
+                rows={3}
                 className="w-full space-y-4 border-b border-neutral-600 px-0 text-white bg-black focus:outline-none focus:ring-0 caret-white resize-none overflow-y-auto"
               ></textarea>
             )}
           </div>
         ))}
-      </div>
+      </div> 
+
       <div className="w-full md:w-2/5">
-      <Details />
-      <div className="flex pl-8">
-      <Platform />
+         <Details />
+        <div className="flex pl-8">
+        <Platform />
+        </div>
       </div>
       </div>
 
-    </div>
-    <div className="flex justify-center mt-6">
-      <Button  text="Send" />
-    </div>
-    </div>
+       <div className="flex justify-center mt-6">
+           <Button  text="Send" />
+        </div>
+        </div>
   );
 };
 

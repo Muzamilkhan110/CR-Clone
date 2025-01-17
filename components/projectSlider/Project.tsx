@@ -19,7 +19,7 @@ interface ProjectProps {
 }
 const Project: React.FC<ProjectProps> = ({ projects }) => {
   return (
-    <div className="container m-auto my-20">
+    <div className="container m-auto my-">
       <div className="py-20 px-[10%]">
         <Swiper
           className="mySwiper"
@@ -47,8 +47,8 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
                   />
                 </div>
                 <div className="bg-zinc-900 rounded-2xl text-white py-10 px-6 shadow-lg lg:w-1/2">
-                  <div className="text-3xl font-bold">{item.title}</div>
-                  <p className="my-6 line-clamp-5 md:line-clamp-[8]">{item.description}</p>
+                  <div className="text-lg md:text-3xl font-bold">{item.title}</div>
+                  <p className="text-xs md:text-lg my-6 line-clamp-5 md:line-clamp-[8]">{item.description}</p>
                   <Button text="View Case Study" />
                 </div>
               </div>

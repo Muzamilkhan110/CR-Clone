@@ -10,7 +10,7 @@ const RecentNews = () =>{
           <div className="xl:px-[10%]" >
             <div className="my-16">
               <Heading tittle="Recent" dynamic="News Letter" />
-              <p className="text-center text-stone-400 mt-3 px-[6%]">
+              <p className="text-center text-sm md:text-base text-stone-400 mt-3 px-[6%]">
                 Uncover industry trends, insights, and innovative ideas. Our
                 blog posts are crafted to keep you informed, inspired, and ahead
                 in your professional journey. Dive in now!

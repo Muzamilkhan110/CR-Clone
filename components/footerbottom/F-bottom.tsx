@@ -2,10 +2,10 @@ import React from "react";
 
 const Fbottom = () => {
     return (
-        <footer>
-        <div className="flex flex-col md:flex-row justify-between items-center text-white px-56 py-4">
+        <footer className="py-4">
+        <div className="flex flex-col-reverse gap-5 md:flex-row justify-between items-center text-xs md:text-base text-white md:px-56 ">
         <p>© Copyrights 2025 All Rights Reserved.</p>
-        <div className="flex space-x-4">
+        <div className="flex md:flex-row space-x-4 text-xs md:text-base">
           {[
             { name: "Terms & Conditions", href: "/terms" },
             { name: "Privacy & Policy", href: "/privacy" },

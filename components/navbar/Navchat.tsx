@@ -14,7 +14,7 @@ const Header = () => {
   };
   return (
     <header className="bg-black">
-      <nav className="container mx-auto flex lg:justify-around items-center py-4">
+      <nav className="container mx-auto flex lg:justify-around pl-4  items-center py-4">
         <div className="lg:flex lg:justify-end">
           <Logo />
         </div>

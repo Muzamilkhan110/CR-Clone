@@ -12,7 +12,7 @@ const TestComp = () => {
     <section className="container m-auto my-20">
       <div className="px-[7%]">
         <Heading tittle="Our" dynamic="Testimonials" />
-        <p className="text-stone-400 text-center my-4 ">
+        <p className="text-stone-400 text-center my-4 text-sm md:text-base">
           Having a satisfied clientele that appreciates our work is a milestone
           in itself. Our clients are our evangelists and they love to write
           their journey and success stories with us.
