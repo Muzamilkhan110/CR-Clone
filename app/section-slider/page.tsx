@@ -31,8 +31,9 @@ const SectionSlider: React.FC<sectionSliderProps> = ({}) => {
             <Image
               src={section.imageSrc!}
               alt={section.imageAlt!}
-              width={200}
+              width={50}
               height={100}
+              className="sm:w-[150px] w-[100px] md:w-[200px]"
             />
           </SwiperSlide>
         ))}

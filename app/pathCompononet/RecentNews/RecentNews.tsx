@@ -19,7 +19,7 @@ const RecentNews = () =>{
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
             {
                   cardDescription3.map((card, index) => (
-            <ImageCard
+                 <ImageCard
                    key={index}
                    imageSrc={card.imageSrc}
                    imageAlt={card.imageAlt}

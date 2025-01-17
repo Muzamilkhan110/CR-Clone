@@ -37,7 +37,7 @@ const TestComp = () => {
             slidesPerView: 3, // Show 3 slides on larger screens
           },
         }}
-        navigation={true}
+        navigation={false}
         scrollbar={{ draggable: true }}
         loop
         autoplay={{

@@ -1,21 +1,18 @@
-
 "use client";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Logo from "@/components/Logo/Logo";
 import Button from "../button/Button";
-import { useState } from "react";
+import SideNav from "@/pages/SideNavbar/SideNav";
+
 
 const Header = () => {
-  const [isOpen, setisOpen] = useState(false);
-  const togglebar = () => {
-    setisOpen(!isOpen);
-  };
+
   return (
     <header className="bg-black">
-      <nav className="container mx-auto flex lg:justify-around pl-4  items-center py-4">
-        <div className="lg:flex lg:justify-end">
+      <nav className="container mx-auto flex hidden lg:justify-around pl-4  items-center py-4">
+        <div className="lg:flex lg:justify-end hidden ">
           <Logo />
         </div>
         <div className=" flex justify-center">
@@ -71,6 +68,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      <SideNav />
     </header>
   );
 };
