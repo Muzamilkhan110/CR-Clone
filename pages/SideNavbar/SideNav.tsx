@@ -38,7 +38,7 @@ const SideNav: React.FC = () => {
     ];
   return (
     <div>
-        <div className='flex justify-between py-3 px-6'>
+        <div className='flex lg:hidden justify-between py-3 px-6'>
         <Logo />
         <button
           className="lg:hidden  rounded focus:outline-none"
@@ -65,7 +65,7 @@ const SideNav: React.FC = () => {
 
           {/* Logo in Slide-in Menu */}
           <Logo />
-          <ul className="space-y-6">
+          <ul className="space-y-6 pt-6">
             {links.map((link, index) => (
               <li key={index}>
                 <a

@@ -5,42 +5,48 @@ import Image from "next/image";
 import Logo from "@/components/Logo/Logo";
 import Button from "../button/Button";
 import SideNav from "@/pages/SideNavbar/SideNav";
+import { usePathname } from "next/navigation";
 
 
 const Header = () => {
 
+const pathname = usePathname();
+
+  const links = [
+    { name: "Home", href: "/" },
+      { name: "About us", href: "/about" },
+      { name: "Industries", href: "/industries" },
+      { name: "Services", href: "/services" },
+      { name: "Case Study", href: "/case-study" },
+      { name: "Feed", href: "/feed" },
+      { name: "Careers", href: "/careers" , showButton : true },
+      
+  ];
   return (
     <header className="bg-black">
-      <nav className="container mx-auto flex hidden lg:justify-around pl-4  items-center py-4">
+      <nav className="container mx-auto hidden lg:flex  lg:justify-around pl-4  items-center py-4">
         <div className="lg:flex lg:justify-end hidden ">
           <Logo />
         </div>
         <div className=" flex justify-center">
-          <ul className="flex hidden xl:gap-8 items-center text-white text-base font-semibold lg:gap-4 sm:hidden md:hidden lg:flex">
-            <li className="hover:useclass ">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/about">About Us</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/industries">Industries</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/services">Services</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/casestudy">Case Study</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/feed">Feed</Link>
-            </li>
-            <li className="hover:useclass">
-              <Link href="/careers">Careers</Link>
-            </li>
-            <li>
-              <Button text="Speak to an Expert" />
-            </li>
+          <ul className="flex  xl:gap-8 items-center text-white text-base font-semibold lg:gap-4 sm:hidden  md:hidden lg:flex">
+          {links.map((link) => (
+             <li key={link.href} className="flex items-center space-x-5">
+        <Link
+          href={link.href}
+          className={` ${
+            pathname === link.href
+              ? "useclass" // Active link styles
+              : "hover:useclass" // Hover styles for non-active links
+          }`}
+        >
+          {link.name}
+           
+        </Link>
+        {link.showButton && <Button text="Speak to an Expert" />}
+        </li>
+        ))}
+            
           </ul>
         </div>
         <div className="hidden lg:block">

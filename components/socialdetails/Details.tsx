@@ -12,35 +12,24 @@ const Details = () => {
               </div>
         
               {/* Description Section */}
-              <div className="pt-5 text-base sm:text-lg">
-                <p>
+              <div className="pt-5  text-base sm:text-lg">
                   If you have any RFP requirements, please share them with us at
-                </p>
-        
-                {/* Email and Career Info Section */}
-                <div className="flex flex-wrap gap-1">
                   <Link
                     className="useclass text-blue-400 underline"
                     href={"mailto:info@conceptrecall.com"}
                   >
                     info@conceptrecall.com
                   </Link>
-                  <p>and if you are looking for a career-</p>
-                </div>
-        
-                {/* Career Section */}
-                <div className="flex flex-wrap gap-1">
-                  <p>related enquiry, please check our</p>
+                  and if you are looking for a career-
+                  related enquiry, please check our
                   <Link
                     href={"/careers"}
                     className="font-semibold useclass cursor-pointer text-blue-400 underline"
                   >
                     Career
                   </Link>
-                  <p>section.</p>
-                </div>
+                   section
               </div>
-        
               {/* Closing Section */}
               <div className="mt-5 text-stone-500 text-xl sm:text-base">
                 <p className="text-lg">
