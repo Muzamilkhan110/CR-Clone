@@ -11,12 +11,13 @@ const TestComp = () => {
   return (
     <section className="container m-auto my-20">
       <div className="px-[7%]">
-        <Heading tittle="Our" dynamic="Testimonials" />
-        <p className="text-stone-400 text-center my-4 text-sm md:text-base">
-          Having a satisfied clientele that appreciates our work is a milestone
+        <Heading
+          tittle="Our"
+          dynamic="Testimonials"
+          text="Having a satisfied clientele that appreciates our work is a milestone
           in itself. Our clients are our evangelists and they love to write
-          their journey and success stories with us.
-        </p>
+          their journey and success stories with us."
+        />
       </div>
 
       <Swiper
@@ -28,7 +29,7 @@ const TestComp = () => {
             navigation: {
               enabled: true,
             },
-                            // Show 1 slide on very small screens
+            // Show 1 slide on very small screens
           },
           768: {
             slidesPerView: 2, // Show 2 slides on medium screens (e.g., tablets)
