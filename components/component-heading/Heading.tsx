@@ -10,11 +10,11 @@ interface HeadingProps {
 const Heading: React.FC<HeadingProps> = ({ tittle, dynamic, text, className='' }) => {
   return (
     <div className="text-center">
-      <div className="flex justify-center gap-1 flex-wrap sm:flex-row">
-        <h1 className="text-xl sm:text-2xl md:text-4xl  text-white font-bold">
+      <div className="flex justify-center gap-2 flex-wrap sm:flex-row">
+        <h1 className="text-lg sm:text-2xl md:text-2xl xl:text-4xl text-white font-bold">
           {tittle}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-4xl useclass font-bold">
+        <p className="text-lg sm:text-2xl md:text-2xl xl:text-4xl useclass font-bold">
           {dynamic}
         </p>
       </div>
