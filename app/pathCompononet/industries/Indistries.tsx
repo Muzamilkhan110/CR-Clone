@@ -5,7 +5,7 @@ import Heading from "@/components/component-heading/Heading";
 import Button from "@/components/button/Button";
 const Industries = () =>{
     return (
-<section className=" ">
+<section className="">
         <div className="container m-auto max-w-screen-lg py-10">
           <div className="px-[1%]">
            <Heading tittle="Industries we've" dynamic="excelled in" text="Our services are tailor-made and we are always striving to surpass

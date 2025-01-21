@@ -16,7 +16,7 @@ const FAQ = () => {
     
     <div className=" text-white py-8">
       {/* Header */}
-      <div className="container mx-auto px-10 xl:px-[13%]">
+      <div className="container mx-auto px-4 md:px-10 xl:px-[13%]">
         <div className="py-8">
 
         <Heading tittle="Frequently Asked" dynamic="Questions" />
