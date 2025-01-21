@@ -14,7 +14,7 @@ const Award = () => {
           <Heading tittle="Award-winning" dynamic=" Services we provide" text=" Our services are tailor-made   and  we are always striving to surpass
               your wildest expectations!" />
           </div>
-          <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 text-white">
+          <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-10 px-3 text-white">
             {
                cardDescription.map((card, index)=>(
                 <Card 
