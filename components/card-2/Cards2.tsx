@@ -28,7 +28,7 @@ const Card2: React.FC<Card2Props> = ({
       <Image className='flex my-8 ml-4 h-auto' src={imageSrc} width={40} height={40} alt={imageAlt} />
       <div className='mx-4 overflow-hidden'>
         <h2 className='text-sm md:text-xl font-semibold  ml-1'>{title}</h2>
-        <p className='my-4 text-xs md:text-base'>{description}</p>
+        <p className='py-4 text-neutral-300 text-base'>{description}</p>
       </div>
       </div>
     

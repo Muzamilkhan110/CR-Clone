@@ -6,6 +6,7 @@ import AboutBanner from "@/pages/Detail-AboutUS/aboutBanner/AboutBanner"
 import AchieveTales from "@/pages/Detail-AboutUS/AchieveTales/AchieveTales"
 import AboutCr from "@/pages/Detail-AboutUS/aboutCR/AboutCr"
 import Values from "@/pages/Detail-AboutUS/OurValues/Values"
+import FAQ from "@/pages/Detail-AboutUS/FAQs/FAQs"
 const about = () =>{
   return(
     <main className="bg-black"> 
@@ -13,6 +14,7 @@ const about = () =>{
       <AchieveTales />
       <AboutCr />
       <Values />
+      <FAQ />
       <RecentNews />
       <section className="py-10">
         <Heading dynamic="Us" tittle="Contact" />
