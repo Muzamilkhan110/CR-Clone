@@ -11,6 +11,7 @@ import FAQ from "@/pages/Detail-AboutUS/FAQs/FAQs"
 import Area from "@/pages/Detail-AboutUS/OurArea/Area"
 import PicSlide from "@/pages/Detail-AboutUS/Gitex/PicSlide"
 import CRtime from "@/pages/Detail-AboutUS/CRtimeline/CRtime"
+import OurTeam from "@/pages/Detail-AboutUS/OurTeam/OurTeam"
 const about = () =>{
   return(
     <main className="bg-black"> 
@@ -18,6 +19,7 @@ const about = () =>{
       <AchieveTales />
       <AboutCr />
       <CRtime />
+      <OurTeam />
       <Values />
       <Area />
       {/* <PicSlide /> */}

@@ -1,21 +1,4 @@
-// import type { Config } from "tailwindcss";
-
-// export default {
-//   content: [
-//     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         background: "var(--background)",
-//         foreground: "var(--foreground)",
-//       },
-//     },
-//   },
-//   plugins: [],
-// } satisfies Config;
+import { plugin } from "postcss";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -34,13 +17,10 @@ export default {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        useclass: "linear-gradient(to right, 	#fb923c, #ea580c, #c2410c)", // Custom gradient
+        bguseclass: "linear-gradient(44deg, 	#f57f3d 20%, #d7392f 35%, #d7392f 60%, #f57f3d 100%)", // Custom gradient
       },
       backgroundSize: {
-        '200': "200% 200%", // Double the background size for smooth animation
-      },
-      animation: {
-        gradient:" gradient1 2s infinite", // Gradient animation
+        '400%': '400% 400%',
       },
       keyframes: {
         gradient1: {
@@ -49,6 +29,11 @@ export default {
           "100%": { backgroundPosition: "0% 50%" },
         },
       },
-    },
+        animation: {
+          gradient:" gradient1 4s ease infinite", // Gradient animation
+      },
+    
   },
+  },
+  plugin:[],
 }

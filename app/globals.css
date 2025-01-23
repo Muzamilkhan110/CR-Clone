@@ -33,11 +33,11 @@ body {
 
 @layer utilities {
   .useclass {
-    background-image: linear-gradient(to right, 	#fb923c, #ea580c, #c2410c);
+    background-image: linear-gradient(44deg, 	#f57f3d 20%, #d7392f 35%, #d7392f 60%, #f57f3d 100%);
     background-size: 200% 200%;
     background-clip: text;
     color: transparent;
-    animation: gradient 2s infinite;
+    animation: gradient 4s infinite;
   }
 
   @keyframes gradient {
