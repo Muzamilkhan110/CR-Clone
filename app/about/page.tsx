@@ -1,3 +1,4 @@
+'use client'
 import React from "react"
 import FormWithGrid from "@/components/label/Label"
 import Heading from "@/components/component-heading/Heading"
@@ -8,14 +9,18 @@ import AboutCr from "@/pages/Detail-AboutUS/aboutCR/AboutCr"
 import Values from "@/pages/Detail-AboutUS/OurValues/Values"
 import FAQ from "@/pages/Detail-AboutUS/FAQs/FAQs"
 import Area from "@/pages/Detail-AboutUS/OurArea/Area"
+import PicSlide from "@/pages/Detail-AboutUS/Gitex/PicSlide"
+import CRtime from "@/pages/Detail-AboutUS/CRtimeline/CRtime"
 const about = () =>{
   return(
     <main className="bg-black"> 
       {/* <AboutBanner /> */}
       <AchieveTales />
       <AboutCr />
+      <CRtime />
       <Values />
       <Area />
+      {/* <PicSlide /> */}
       <FAQ />
       <RecentNews />
       <section className="py-10">

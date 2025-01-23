@@ -23,7 +23,7 @@ const aboutdetails = [
 
 const AboutCr = () => {
   return (
-    <div className='bg-black container py-[5%] '>
+    <div className='bg-black  py-[5%] '>
         <div className='md:px-4 lg:px-7 xl:px-[11%] '>
         <Heading tittle='About ' dynamic='ConceptRecall' />
         <p className='pb-8 text-xs md:text-sm xl:text-base text-neutral-300 text-center px-[1%]'>ConceptRecall is dedicated to elevating businesses, enhancing revenue, and propelling companies to new levels of success. Our straightforward yet effective strategies have earned us recognition as a client-focused marketing agency with over 95.5% satisfied clientele. With a decade of experience, we have a rich history of completing numerous projects and cultivating client happiness.</p>

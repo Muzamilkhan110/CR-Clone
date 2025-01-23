@@ -4,7 +4,7 @@ import Image from "next/image";
 import Button from "@/components/button/Button";
 const AchieveTales = () => {
   return (
-    <div className="bg-zinc-900  py-4 lg:py-14">
+    <div className="bg-zinc-900  py-4 lg:py-14 ">
      <div className="px-1 lg:px-[23%] ">
        <Heading tittle="Fostering" dynamic="Achievement Tales" text="We're committed to nurturing success, helping businesses from various
            sectors grow and thrive through our dedicated support and innovative
