@@ -22,7 +22,7 @@ const pathname = usePathname();
       { name: "Careers", href: "/careers" , showButton : true },
       
   ];
-  return (
+  return ( 
     <header className="bg-black">
       <nav className="container mx-auto hidden lg:flex  lg:justify-around pl-4  items-center py-4">
         <div className="lg:flex lg:justify-end hidden ">

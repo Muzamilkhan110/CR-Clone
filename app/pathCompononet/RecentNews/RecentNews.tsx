@@ -5,7 +5,7 @@ import ImageCard from "@/components/RecentNews/Image-Card";
 import Button from "@/components/button/Button";
 const RecentNews = () => {
   return (
-    <section className="bg-zinc-900 py-7">
+    <section className="bg-zinc-900 py-7 ">
       <div className="container m-auto  ">
         <div className="xl:px-[10%]">
           <div className="my-16">

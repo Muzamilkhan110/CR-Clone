@@ -14,7 +14,7 @@ const FAQ = () => {
 
   return (
     
-    <div className=" text-white py-8">
+    <div className=" text-white py-8 container m-auto">
       {/* Header */}
       <div className="container mx-auto px-4 md:px-10 xl:px-[13%]">
         <div className="py-8">

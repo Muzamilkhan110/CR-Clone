@@ -25,7 +25,7 @@ const about = () =>{
       {/* <PicSlide /> */}
       <FAQ />
       <RecentNews />
-      <section className="py-10">
+      <section className="py-10 container m-auto">
         <Heading dynamic="Us" tittle="Contact" />
         <div><FormWithGrid /></div>
       </section>

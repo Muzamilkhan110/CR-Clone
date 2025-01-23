@@ -5,8 +5,8 @@ import { cardDescription1 } from '@/app/data/second/page'
 
 const Values = () => {
   return (
-    <div>
-        <section className="bg-zinc-900">
+    <div className='bg-zinc-900 '>
+        <section className="container m-auto">
         <div className="container m-auto max-w-screen-lg py-10">
           <div className="px-[1%]">
            <Heading tittle="Our" dynamic="Values" text="Our services are tailor-made and we are always striving to surpass your wildest expectations!" />

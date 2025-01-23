@@ -13,7 +13,7 @@ const TimelineButton = ({ content }: { content: string }) => {
     return (
         <div className="ml-5 md:ml-10 xl:ml-20">
 
-      <button className="bg-useclass text-white px-10 py-2 rounded-3xl shadow-lg">
+        <button className="bg-bguseclass text-white px-10 py-2 rounded-3xl shadow-lg">
         {content}
       </button>
         </div>
@@ -61,11 +61,14 @@ const TimelineWithPadding = () => {
   ];
 
   return (
-    <section className="bg-zinc-900 py-6 lg:py-16">
+    <section className="bg-zinc-900 py-6 lg:py-16 ">
+      <div className="container m-auto">
+
+   
       <Heading tittle="C.R" dynamic="Timeline" text="At ConceptRecall, our process kicks off with a detailed evaluation to pinpoint the unique needs and goals of each project, setting the stage for strategic success. Our seasoned core team powers our innovative approaches, driving client success through a dynamic and adaptable development process." />
       {/* Top section with dot */}
-      <div className="pl-4 md:px-10 lg:pl-[3%] xl:pl-[13%] pt-[6%]">
-        <div className="bg-useclass w-3 h-3 rounded-full relative z-50"></div>
+      <div className="pl-4 lg:pl-[3%] xl:pl-[13%] pt-[6%]">
+        <div className="bg-bguseclass w-3 h-3 rounded-full relative z-50"></div>
       </div>
 
       {/* Vertical line */}
@@ -74,7 +77,7 @@ const TimelineWithPadding = () => {
       </div>
 
       {/* Swiper slider with left padding */}
-      <div className="pl-4 md:px-10 lg:pl-[3%] xl:pl-[13%] pt-6 relative bottom-14 z-0">
+      <div className="pl-4 md:px-10 lg:pl-[3%] xl:pl-[13%] pt-6 relative bottom-14 z-0 container">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={20}
@@ -100,6 +103,7 @@ const TimelineWithPadding = () => {
          </SwiperSlide>
           ))}
         </Swiper>
+      </div>
       </div>
     </section>
   );
