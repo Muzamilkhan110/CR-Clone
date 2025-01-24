@@ -15,7 +15,7 @@ import OurTeam from "@/pages/Detail-AboutUS/OurTeam/OurTeam"
 const about = () =>{
   return(
     <main className="bg-black"> 
-      {/* <AboutBanner /> */}
+      <AboutBanner />
       <AchieveTales />
       <AboutCr />
       <CRtime />

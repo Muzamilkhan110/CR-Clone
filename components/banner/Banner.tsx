@@ -15,11 +15,11 @@ const Banner:React.FC<bannerProps> = ({
 
 }) => {
   return (
-    <div className='container max-w-screen-lgx'>
-        <div className=''>
-        <div className=" text-xl md:text-5xl lg:flex justify-center  gap-2">
-         <h1 className={`text-white font-bold whitespace-nowrap' ${className}`}>{title}</h1>
-         <h1 className='text-white font-bold whitespace-nowrap py-1'>{text}</h1>
+    <div className=''>
+        <div className='container m-auto'>
+        <div className="text-white  font-bold text-xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl text-wrap text-center" >
+         <span className="useclass ">{title}</span>
+         {text}
          <p>{description}</p>
         </div>
         </div>

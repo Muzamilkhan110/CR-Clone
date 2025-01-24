@@ -9,6 +9,7 @@ export default {
   ],
   theme: {
     extend: {
+      
       borderWidth:{
         '0.5':'0.5px',
       },
@@ -23,6 +24,14 @@ export default {
         '400%': '400% 400%',
       },
       keyframes: {
+        rotateClockwise: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        rotateAntiClockwise: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
+        },
         gradient1: {
           "0%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
@@ -31,6 +40,8 @@ export default {
       },
         animation: {
           gradient:" gradient1 4s ease infinite", // Gradient animation
+          "rotate-clockwise": "rotateClockwise 4s linear infinite",
+          "rotate-anti-clockwise": "rotateAntiClockwise 4s linear infinite",
       },
     
   },
