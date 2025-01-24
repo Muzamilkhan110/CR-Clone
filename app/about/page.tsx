@@ -21,8 +21,8 @@ const about = () =>{
       <CRtime />
       <OurTeam />
       <Values />
+      <PicSlide />
       <Area />
-      {/* <PicSlide /> */}
       <FAQ />
       <RecentNews />
       <section className="py-10 container m-auto">

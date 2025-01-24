@@ -38,7 +38,7 @@ const FAQ = () => {
                 <span className="ml-2  text-2xl text-white">
                   {activeIndex === index ? "−" : "+"}
                 </span>
-              </button>
+              </button> 
 
               {/* Answer (conditionally rendered) */}
               {activeIndex === index && (

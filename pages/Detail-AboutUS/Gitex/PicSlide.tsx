@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Heading from "@/components/component-heading/Heading";
 
 const pictures = [
   {
@@ -39,30 +40,37 @@ const pictures = [
 
 const PicSlide = ({}) => {
   return (
-    <div className="bg-black">
+    <div className="bg-black container m-auto py-4 md:py-10">
+      <Heading tittle="Our Participation in" dynamic="GITEX Global:" text="ConceptRecall proudly showcased our advanced technology and cloud systems at GITEX, the world's largest tech event. We formed invaluable partnerships and made lasting friendships, solidifying our leadership in AI innovation." />
+      <div className="py-4 md:py-14">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={2} // Sets gap between slides
-        slidesPerView={3} // Number of slides visible at a time
-        autoplay={{ delay: 5000 }}
-        // navigation
-        pagination={{ clickable: true }}
+      
+        breakpoints={{
+          320: { slidesPerView: 2 },
+          768:{ slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+          1440:{ slidesPerView: 4}
+        }}
+        loop
+        autoplay={{ delay: 1000 }}
+         effect="slide"
+        
       >
         {pictures.map((card, index) => (
-          <SwiperSlide key={index} className="group">
-   
-
-            <Image
+          <SwiperSlide key={index}>
+             <Image
               src={card.imageSrc}
               alt={card.imageAlt}
               width={370}
-              height={50}
-              className="group-hover:opacity-1 opacity-50 transition-opacity duration-300"
+              height={100}
+              className="md:grayscale hover:grayscale-0"
             />
-          
           </SwiperSlide>
         ))}
       </Swiper>
+      </div>
     </div>
   );
 };
