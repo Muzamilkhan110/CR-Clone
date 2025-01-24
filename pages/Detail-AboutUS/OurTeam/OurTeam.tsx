@@ -70,55 +70,46 @@ const chiefHead = [
 
 const OurTeam = () => {
   return (
-    <div className="container mx-auto">
-      <div>
+    <div className="container m-auto  ">
+      <div className="lg:px-[4%] py-10">
+       <div className="py-8">
         <Heading
           tittle="Introducing Our"
           text="Get to know the passionate individuals behind ConceptRecall, each bringing unique expertise and creativity to our collective success."
           dynamic="Team"
-        />
-        <div className="flex justify-center">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-12 gap-6 my-10">
-              {/* First 3 pictures: Each spans 4 columns */}
-              {chiefHead.slice(0, 3).map((head, index) => (
-                <div
-                  key={index}
-                  className="col-span-12 sm:col-span-6 md:col-span-4"
-                >
-                  <PicHead
-                    imageSrc={head.imageSrc}
-                    imageAlt={head.imageAlt}
-                    heading={head.heading}
-                    text={head.text}
-                    svgSrc={head.svgSrc}
-                    svgAlt={head.svgAlt}
-                  />
-                </div>
-              ))}
-
-              {/* Remaining pictures: Responsive grid for 4 per row */}
-              {chiefHead.slice(3).map((head, index) => (
-                <div
-                  key={index}
-                  className="col-span-12 sm:col-span-6 md:col-span-4"
-                >
-                  <PicHead
-                    imageSrc={head.imageSrc}
-                    imageAlt={head.imageAlt}
-                    heading={head.heading}
-                    text={head.text}
-                    svgSrc={head.svgSrc}
-                    svgAlt={head.svgAlt}
-                  />
-                </div>
-              ))}
+        /></div>
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12  justify-items-center gap-2  w-full max-w-[90%]  mx-auto">
+          {chiefHead.slice(0,3).map((data , index) =>(
+            <div   key={index} className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-4 xl:col-span-4">
+              <PicHead
+              imageSrc={data.imageSrc}
+              imageAlt={data.imageAlt}
+              heading={data.heading}
+              text={data.text}
+              svgSrc={data.svgSrc}
+              svgAlt={data.svgAlt}
+              />
             </div>
+          ))
+          }
+          {chiefHead.slice(3).map((data , index) =>(
+            <div   key={index} className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-3 ">
+              <PicHead
+              imageSrc={data.imageSrc}
+              imageAlt={data.imageAlt}
+              heading={data.heading}
+              text={data.text}
+              svgSrc={data.svgSrc}
+              svgAlt={data.svgAlt}
+              />
+            </div>
+          ))
+          }
           </div>
-        </div>
-      </div>
+    </div>
     </div>
   );
 };
 
 export default OurTeam;
+ 

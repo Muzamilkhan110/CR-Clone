@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
               placeholder="Enter your Email Address"
               className="flex-1 p-4 bg-transparent focus:outline-none text-neutral-600"
             />
-            <Button text="Submit" className="sm:m-2" />
+            <Button text="Submit" className="sm:m-2 " />
           </div>
         </div>
       </div>

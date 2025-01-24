@@ -26,7 +26,7 @@ const PicHead: React.FC<PicHeadProps> = ({
       <div className="py-4">
         <h2 className="text-base text-white">{heading}</h2>
         <p className="text-sm text-neutral-400">{text}</p>
-        <div className="pt-2">
+        <div className="py-2">
           <Link href={"mailto:info@conceptrecall.com"}>
             <Image src={svgSrc} alt={svgAlt} width={15} height={10} />
           </Link>
