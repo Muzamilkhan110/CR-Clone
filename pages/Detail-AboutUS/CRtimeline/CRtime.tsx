@@ -11,7 +11,7 @@ import Heading from "@/components/component-heading/Heading";
 // Button Component
 const TimelineButton = ({ content }: { content: string }) => {
     return (
-        <div className="ml-5 md:ml-10 xl:ml-20">
+        <div className="ml-5 md:ml-10 xl:ml-15">
 
         <button className="bg-bguseclass text-white px-10 py-2 rounded-3xl shadow-lg">
         {content}
@@ -64,7 +64,7 @@ const TimelineWithPadding = () => {
     <section className="bg-zinc-900 py-6 lg:py-16 ">
       <div className="container m-auto">
 
-   
+      <div className="xl:px-[7%]">
       <Heading tittle="C.R" dynamic="Timeline" text="At ConceptRecall, our process kicks off with a detailed evaluation to pinpoint the unique needs and goals of each project, setting the stage for strategic success. Our seasoned core team powers our innovative approaches, driving client success through a dynamic and adaptable development process." />
       {/* Top section with dot */}
       <div className="pl-4 lg:pl-[3%] xl:pl-[13%] pt-[6%]">
@@ -103,6 +103,7 @@ const TimelineWithPadding = () => {
          </SwiperSlide>
           ))}
         </Swiper>
+      </div>
       </div>
       </div>
     </section>

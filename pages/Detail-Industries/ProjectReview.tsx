@@ -1,25 +1,27 @@
 import React from 'react'
 import IndusComp from '@/components/Industries-comp/IndusComp'
+import { compData } from '@/app/data/projectsdata/page';
 
-const ProjectReview = () => {
+const App = () => {
   return (
-    <div className='bg-zinc-900 py-8'>
-    <div className='container m-auto'>
-        <div className='flex justify-center'>
-        <IndusComp 
-        tags='okay'
-        svgSrc={'/Big-Data.svg'}
-        svgAlt='svg'
-        heading='Big Data'
-        descriptions='mskdmnjdhfdjkhfdjfhdjkfsdjkfhjkashfjksd'
-        imageSrc='/1.png'
-        imageAlt='image'
+    <div>
+      {compData.map((data, index) => (
+        <IndusComp
+          key={index} // Key is important for React's reconciliation process
+          tags={data.tags}
+          tags1={data.tags1}
+          tags2={data.tags2}
+          svgSrc={data.svgSrc}
+          svgAlt={data.svgAlt}
+          heading={data.heading}
+          descriptions={data.descriptions}
+          imageSrc={data.imageSrc}
+          imageAlt={data.imageAlt}
+          bgColor={data.bgColor} // Pass bgColor dynamically
         />
+      ))}
+    </div>
+  );
+};
 
-    </div>
-    </div>
-    </div>
-  )
-}
-
-export default ProjectReview
+export default App;
