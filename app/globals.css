@@ -4,32 +4,11 @@
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-/* @import './base.css'; */
 @import 'tailwindcss/utilities';
 
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
-/* 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-/* Custom gradient animation */
-/* Custom Gradient Animation and Text Styles */
 
 @layer utilities {
   .useclass {
@@ -78,27 +57,18 @@ body {
     transform: translateX(-50%);
   }
 }
-/* .spinners {
-  @apply w-full h-full absolute top-0 left-0 z-[-1] overflow-hidden bg-logo-low-opacity bg-no-repeat xl:bg-center;
-  background-size: 28%;
-  background-position: 51% 23%;
-  @include responsive(1024px) {
-    background-position: 51% 40%;
-  }
-  @include responsive(1200px) {
-    background-position-x: center;
-    background-position-y: 53%;
-  }
-  .spinner-block {
-    @apply h-[680px] lg:h-[950px] xl:h-[1100px] relative w-full my-0 mx-auto;
-  }
-  .spinner:before {
-    @apply block absolute border-2 border-solid rounded-full;
-  }
-  .spinner.spinner-1:before {
-    @apply w-full h-full top-[-17%] left-0 m-auto dark:border-r-link-light-40 dark:border-b-link-light-40 border-b-grey border-r-grey  border-t-transparent border-l-transparent content-[''] animate-rotate-anti-clockwise;
-  }
-  .spinner.spinner-2:before {
-    @apply w-[35%] h-[35%] dark:border-b-link-light-40 border-b-grey dark:border-r-link-light-40 border-r-grey border-t-transparent border-l-transparent  top-[8%] left-[33%] m-auto content-[''] animate-rotate-clockwise;
-  }
-} */
+.swiper-pagination{
+  position: relative;
+  top: 15px !important;
+  padding-bottom: 32px;
+}
+.swiper-pagination-bullet{ 
+  background-color: black;
+}
+.swiper-pagination-bullet-active{
+  background-color: rgb(230, 85, 64);
+  width: 12px; 
+  position: relative;
+  top: 1.5px;
+  height: 12px;
+}
