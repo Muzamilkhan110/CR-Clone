@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @import "swiper/css";
 @import "swiper/css/navigation";
@@ -12,7 +12,13 @@
 
 @layer utilities {
   .useclass {
-    background-image: linear-gradient(44deg, 	#f57f3d 20%, #d7392f 35%, #d7392f 60%, #f57f3d 100%);
+    background-image: linear-gradient(
+      44deg,
+      #f57f3d 20%,
+      #d7392f 35%,
+      #d7392f 60%,
+      #f57f3d 100%
+    );
     background-size: 200% 200%;
     background-clip: text;
     color: transparent;
@@ -57,18 +63,37 @@
     transform: translateX(-50%);
   }
 }
-.swiper-pagination{
+.swiper-pagination {
   position: relative;
   top: 15px !important;
   padding-bottom: 32px;
 }
-.swiper-pagination-bullet{ 
+.swiper-pagination-bullet {
   background-color: black;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: rgb(230, 85, 64);
-  width: 12px; 
+  width: 12px;
   position: relative;
   top: 1.5px;
   height: 12px;
 }
+/* Style the scrollbar track */
+.swiper-scrollbar { 
+  background-color: #d7392f; /* Light gray for the track */
+  height: 8px; /* Adjust height */
+  width: 10px;
+  border-radius: 5px; /* Rounded edges */
+}
+
+/* Style the scrollbar handle */
+.swiper-scrollbar-drag {
+  background-color: #d7392f !important; /* Blue for the handle */
+  border-radius: 5px; /* Rounded edges for the handle */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+
+
+
+

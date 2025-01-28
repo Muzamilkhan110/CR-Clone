@@ -6,6 +6,7 @@ import Heading from "@/components/component-heading/Heading"
 import ProjectReview from '@/pages/Detail-Industries/ProjectReview'
 import IndusBaner from '@/pages/Detail-Industries/IndusBaner'
 import Discus from '@/pages/Detail-Industries/Discus'
+import Workproc from '@/pages/Detail-Industries/Workproc'
 
 const page = () => {
   return (
@@ -19,6 +20,7 @@ const page = () => {
       </div>
       <ProjectReview />
       <Discus />
+      <Workproc />
       <div className='py-6'>
       <Heading tittle="Contact" dynamic="Us" />
       <FormWithGrid />
