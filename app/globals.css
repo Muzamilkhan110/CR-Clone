@@ -80,6 +80,8 @@
 }
 /* Style the scrollbar track */
 .swiper-scrollbar { 
+  position: relative;
+  top: 1px;
   background-color: #d7392f; /* Light gray for the track */
   height: 8px; /* Adjust height */
   width: 10px;
