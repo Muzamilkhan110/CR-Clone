@@ -38,7 +38,7 @@ const SideNav: React.FC = () => {
     ];
   return (
     <div>
-        <div className='flex lg:hidden justify-between py-3 px-6'>
+        <div className='flex lg:hidden justify-between py-3 px-4'>
         <Logo />
         <button
           className="lg:hidden  rounded focus:outline-none"

@@ -69,14 +69,17 @@
   padding-bottom: 32px;
 }
 .swiper-pagination-bullet {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  width: 12px;
+  height: 12px;
+
 }
 .swiper-pagination-bullet-active {
   background-color: rgb(230, 85, 64);
-  width: 12px;
+  width: 16px;
   position: relative;
   top: 1.5px;
-  height: 12px;
+  height: 16px;
 }
 /* Style the scrollbar track */
 .swiper-scrollbar { 

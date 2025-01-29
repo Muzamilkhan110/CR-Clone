@@ -47,6 +47,7 @@ const imgData = [
 
 ];
 const IndusServe = () => {
+
   return (
     <div className="bg-zinc-900 pt-8">
       <div className='text-lg sm:text-2xl md:text-2xl xl:text-4xl text-white py-7 font-bold flex justify-center gap-2'>
@@ -68,6 +69,7 @@ const IndusServe = () => {
         }}
         pagination={{
           clickable: true,
+      
         }}
         autoplay={{
           delay:2000,

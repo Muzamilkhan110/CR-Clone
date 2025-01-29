@@ -11,7 +11,7 @@ const Logo = () => {
           alt="Company Logo"
           width={200} // Adjust the size as needed
           height={40} // Adjust the size as needed
-          className="cursor-pointer w-[130px] sm:w-[150px] md:w-[180px]"
+          className="cursor-pointer w-[170px] sm:w-[150px] md:w-[180px]"
         />
     </Link>
     </div>
