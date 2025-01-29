@@ -4,7 +4,7 @@ const CreationService = () => {
   return (
     <section
       className="flex items-center flex-col h-[calc(100vh-85px)]  max-lg:h-[calc(100vh-66px)] max-sm:h-[calc(100vh-300px)] overflow-hidden object-cover md:shrink-0"
-      style={{ backgroundImage: "url('/industry-hero-banner.webp')" }}
+      style={{ backgroundImage: "url('/services-banner.webp')" }}
     >
       <div className="container m-auto">
         <div className="max-sm:pl-4  md:flex justify-center lg:justify-around items-center">
