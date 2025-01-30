@@ -56,7 +56,7 @@ const OurApproach = () => {
             heading2={data.heading2}
             paragraph={data.paragraph}
             isBlackBackground={isBlackBackground}
-            {...(!isBlackBackground && { // Only pass these props when background is NOT black
+            {...(!isBlackBackground && {
               heading3: data.heading3,
               heading4: data.heading4,
               paragraph1: data.paragraph1

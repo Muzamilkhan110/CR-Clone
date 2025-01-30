@@ -13,7 +13,7 @@ const ToolsLogo: React.FC<ToolsLogoProps> = ({ imageSrc, imageAlt  }) => {
         <Image
           src={imageSrc}
           alt={imageAlt}
-          width={70}
+          width={30}
           height={20}
           className=""
         />

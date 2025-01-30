@@ -4,10 +4,10 @@ import { dataFAQ } from "@/app/data/OurApproachData/page";
 import Image from "next/image";
 
 const FAQ = () => {
-  // Track which question is expanded
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  // Function to toggle visibility of answers
+ 
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };

@@ -7,6 +7,7 @@ import FAQ from "../ServiceFAQ/ServiceFAQ";
 import { useState, useEffect } from "react";
 import CompIndus from "@/components/CompIndus/CompIndus";
 import { imgData } from "@/pages/Detail-Sevices/WeServe";
+import ServiceLogos from "../ServiceLogo/ServiceLogo";
 interface ServiceCompProps {
   id?: number;
   heading1?: string;
@@ -29,7 +30,7 @@ const ServiceComponent: React.FC<ServiceCompProps> = ({
   isBlackBackground = false,
 }) => {
   return (
-    <div className={`${isBlackBackground ? "bg-black" : "bg-zinc-900"} py-12`}>
+    <div className={`${isBlackBackground ? "bg-black" : "bg-zinc-900"} py-5`}>
       <div className="max-w-[90%] mx-auto">
         <div className="">
           <div className="text-white text-lg font-bold mb-4">
@@ -54,35 +55,10 @@ const ServiceComponent: React.FC<ServiceCompProps> = ({
             </p>
           </div>
         )}
-        <div
-          className={`${
-            isBlackBackground ? "max-w-[80%]" : "max-w-[100%]"
-          } pt-10`}
-        >
-          <div
-            className={`grid ${
-              isBlackBackground ? "grid-cols-3 gap-5" : "grid-cols-4 gap-3"
-            }`}
-          >
-            {toolLogo.map((data, index) => (
-              <div key={index}>
-                <div
-                  className={`${
-                    isBlackBackground ? "bg-zinc-900 p-3" : "bg-black p-3"
-                  }  rounded-lg `}
-                >
-                  <ToolsLogo
-                    imageSrc={data.imageSrc}
-                    imageAlt={data.imageAlt}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ServiceLogos isBlackBackground={true} />
         {isBlackBackground && (
-          <div className="pt-8">
-             <FAQ /> 
+          <div className="">
+            <FAQ />
           </div>
         )}
       </div>
