@@ -1,14 +1,25 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
-interface ToolsLogoProps{
-    imageSrc: string;
-    imageAlt: string;
-
+interface ToolsLogoProps {
+  imageSrc: string;
+  imageAlt: string;
+  isBlack?: boolean;
 }
-const ToolsLogo:React.FC<ToolsLogoProps> = ({imageSrc , imageAlt}) => {
+const ToolsLogo: React.FC<ToolsLogoProps> = ({ imageSrc, imageAlt  }) => {
   return (
-    <div></div>
-  )
-}
+    <div className="rounded-lg">
+      <div className="">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          width={70}
+          height={20}
+          className=""
+        />
+      </div>
+    </div>
+  );
+};
 
-export default ToolsLogo
+export default ToolsLogo;

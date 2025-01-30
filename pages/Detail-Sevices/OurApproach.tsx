@@ -1,39 +1,40 @@
+"use client";
 import React from "react";
-import ServiceComp from "@/components/ServiceComp/ServiceComp";
+import ServiceComponent from "@/components/ServiceComp/ServiceComp";
 import { ourData } from "@/app/data/OurApproachData/page";
+import { useState, useEffect } from "react";
+import CompIndus from "@/components/CompIndus/CompIndus";
+import { imgData } from "./WeServe";
 
 const OurApproach = () => {
   return (
     <div>
-      <div className="container m-auto">
-        <div>
-          {ourData.map((data, index) => {
-            const isBlack = index % 2 === 0;
-
-            return (
-              <div
-                key={index}
-                className={`justify-center ${
-                  isBlack ? "bg-black" : "bg-zinc-900"
-                }`}
-              >
-                <ServiceComp
-                  typo={data.typo}
-                  typo1={data.typo1}
-                  text={data.text}
-                  isBlack={isBlack}
-                />
-                {index % 2 !== 0 && (
-                  <ServiceComp
-                    s2typo={data.s2typo}
-                    s2typo1={data.s2typo1}
-                    text={data.text} 
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
+      <div>
+        {ourData.filter((member) => member.id % 2 === 1).map((data, index) => (
+          <div key={index} className="">
+            <ServiceComponent
+              heading1={data.heading1}
+              heading2={data.heading2}
+              paragraph={data.paragraph}
+              isBlackBackground={true}
+            />
+          </div>
+        ))}
+        {ourData.filter((member) => member.id % 2 === 0).map((data, index) => (
+          <div key={index} className="">
+            <ServiceComponent
+              id={2}
+              heading1={data.heading1}
+              heading2={data.heading2}
+              paragraph={data.paragraph}
+              heading3={data.heading3}
+              heading4={data.heading4}
+              paragraph1={data.paragraph1}
+              isBlackBackground={!true}
+            />
+            
+          </div>
+        ))}
       </div>
     </div>
   );

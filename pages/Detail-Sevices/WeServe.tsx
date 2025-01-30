@@ -7,37 +7,43 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 
 
-const imgData = [
+export const imgData = [
     {
+      row: 0,
       imageSrc: "/file1.png",
       imageAlt: "icoSvg",
       title1:"Medical"
     },
     {
-      imageSrc: "/file1.png",
-      imageAlt: "icoSvg",
-      title1:"Medical"
-  
-    },
-    {
+      row: 1,
       imageSrc: "/file1.png",
       imageAlt: "icoSvg",
       title1:"Medical"
   
     },
     {
+      row: 2,
       imageSrc: "/file1.png",
       imageAlt: "icoSvg",
       title1:"Medical"
   
     },
     {
+      row: 3,
       imageSrc: "/file1.png",
       imageAlt: "icoSvg",
       title1:"Medical"
   
     },
     {
+      row: 4,
+      imageSrc: "/file1.png",
+      imageAlt: "icoSvg",
+      title1:"Medical"
+  
+    },
+    {
+      row: 5,
       imageSrc: "/file1.png",
       imageAlt: "icoSvg",
       title1:"Medical"
