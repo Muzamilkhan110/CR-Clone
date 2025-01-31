@@ -1,29 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { ourData } from "@/app/data/OurApproachData/page";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ToolsLogoProps {
-  imageSrc:string[];
-  imageAlt:string[];
-  isBlack?:boolean;
+  imageSrc: string | StaticImport;
+  imageAlt: any;
+  isBlack?: boolean;
+  className?:string;
 }
-const ToolsLogo: React.FC<ToolsLogoProps> = ({ imageSrc , imageAlt}) => {
+const ToolsLogo: React.FC<ToolsLogoProps> = ({ imageSrc, imageAlt , className='' }) => {
   return (
-    <div className="rounded-lg ">
-      <div className="md:min-w-[100px]">
-      <div className=" grid grid-cols-3 gap-5 py-10 max-w-[200px]">
-                {ourData[0].imagesources.map((src, index) => (
-                    <div key={index}  className="bg-zinc-900 p-3 rounded-lg ">
-                      <Image
-                        src={src}
-                        alt={ourData[0].imagealter[index]}
-                        width={30}
-                        height={30}
-                      />
-                    </div>
-                ))}
-              </div>
-      </div>
+    <div>
+        <Image className={`${className} p-2 rounded-lg md:w-[100px] `} src={imageSrc} alt={imageAlt} width={60} height={30} />
     </div>
   );
 };

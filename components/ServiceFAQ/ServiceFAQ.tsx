@@ -1,62 +1,37 @@
-"use client"; // If you're using app directory in Next.js
+"use client";
 import { useState } from "react";
-import { dataFAQ } from "@/app/data/OurApproachData/page";
 import Image from "next/image";
 
-const FAQ = () => {
-
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
- 
-  const toggleFAQ = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+interface FAQProps {
+  question: string;
+  answer: string;
+}
+const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
+  const [isActive, setIsActive] = useState(false);
+  
   return (
-    <div className="lg:pt-8">
-      {/* Questions */}
-      <div className="space-y-4">
-        {dataFAQ.map((data, index) => (
-          <div
-            key={index}
-            className={`border rounded-xl p-4 md:p-7 ${
-              activeIndex === index ? "bg-neutral-800" : ""
-            }`}
-          >
-            {/* Question */}
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="flex justify-between  items-center w-full text-left xl:text-lg font-medium focus:outline-none"
-            >
-              <div className="text-sm md:text-lg font-bold text-white max-w-[90%]">
-                {data.question}
-              </div>
-              <div className="ml-2  text-2xl text-white max-w-[10%]">
-                {activeIndex === index ? (
-                  <Image
-                    src={"/collapsew.png"}
-                    alt="SvgIcon"
-                    width={20}
-                    height={20}
-                  />
-                ) : (
-                  <Image
-                    src={"/expandw.png"}
-                    alt="SvgIcon"
-                    width={20}
-                    height={10}
-                  />
-                )}
-              </div>
-            </button>
-
-            {/* Answer (conditionally rendered) */}
-            {activeIndex === index && (
-              <p className="mt-2 text-neutral-300 text-xs md:text-base">{data.answer}</p>
-            )}
-          </div>
-        ))}
-      </div>
+    <div className="py-2 xl:py-3">
+    <div className="border rounded-xl p-4 md:p-7">
+      <button
+        onClick={() => setIsActive(!isActive)}
+        className="flex justify-between items-center w-full text-left xl:text-lg font-medium focus:outline-none"
+      >
+        <div className="text-sm md:text-lg font-bold text-white max-w-[90%]">
+          {question}
+        </div>
+        <div className="ml-2 text-2xl text-white max-w-[10%]">
+          {isActive ? (
+            <Image src="/collapsew.png" alt="Collapse" width={20} height={20} />
+          ) : (
+            <Image src="/expandw.png" alt="Expand" width={20} height={10} />
+          )}
+        </div>
+      </button>
+      {isActive && (
+        <p className="mt-2 text-neutral-300 text-xs md:text-base">{answer}</p>
+      )}
     </div>
+  </div>
   );
-};
+}
 export default FAQ;
