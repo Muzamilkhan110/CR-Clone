@@ -58,7 +58,7 @@ const WeServe = () => {
         <Heading dynamic="Services" />
          We Serve
         </div>
-        <div className="container m-auto">
+        <div className="max-w-[1300px] m-auto">
         <div className="px-[15%] lg:px-10 xl:px-[10%]">
         <Swiper
         className="items-center relative z-0 "

@@ -7,7 +7,7 @@ const CreationService = () => {
       style={{ backgroundImage: "url('/services-banner.webp')" }}
     >
       <div className="container m-auto">
-        <div className="max-sm:pl-4  md:flex justify-center lg:justify-around items-center">
+        <div className="max-sm:pl-4  md:flex justify-center lg:justify-evenly items-center">
         <div className="max-sm:pr-6 md:max-w-[400px] lg:max-w-[500px]">
           <div className="text-xl md:text-4xl xl:text-6xl font-bold text-white ">
             <span className="useclass">Personalized Application&nbsp;</span>

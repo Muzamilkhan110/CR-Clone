@@ -4,9 +4,9 @@ import ServiceComponent from "@/components/ServiceComp/ServiceComp";
 import { ourData } from "@/app/data/OurApproachData/page";
 import { useState, useEffect } from "react";
 import CompIndus from "@/components/CompIndus/CompIndus";
-import { imgData } from "./WeServe";
 
-// const OurApproach = () => {
+
+
 //   return (
 //     <div>
 //       <div>
@@ -32,7 +32,7 @@ import { imgData } from "./WeServe";
 //               paragraph1={data.paragraph1}
 //               isBlackBackground={!true}
 //             />
-            
+
 //           </div>
 //         ))}
 //       </div>
@@ -42,7 +42,6 @@ import { imgData } from "./WeServe";
 
 // export default OurApproach;
 
-
 const OurApproach = () => {
   return (
     <div>
@@ -50,18 +49,16 @@ const OurApproach = () => {
         const isBlackBackground = data.id % 2 === 1;
 
         return (
-          <ServiceComponent
-            key={index}
-            heading1={data.heading1}
-            heading2={data.heading2}
-            paragraph={data.paragraph}
-            isBlackBackground={isBlackBackground}
-            {...(!isBlackBackground && {
-              heading3: data.heading3,
-              heading4: data.heading4,
-              paragraph1: data.paragraph1
-            })}
-          />
+          <div   key={index}>
+            <ServiceComponent
+            
+              heading1={data.heading1}
+              heading2={data.heading2}
+              paragraph={data.paragraph}
+              isBlackBackground={isBlackBackground}
+            />
+            
+          </div>
         );
       })}
     </div>

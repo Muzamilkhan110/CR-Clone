@@ -12,7 +12,7 @@ const FAQ = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <div>
+    <div className="lg:pt-8">
       {/* Questions */}
       <div className="space-y-4">
         {dataFAQ.map((data, index) => (
@@ -27,7 +27,7 @@ const FAQ = () => {
               onClick={() => toggleFAQ(index)}
               className="flex justify-between  items-center w-full text-left xl:text-lg font-medium focus:outline-none"
             >
-              <div className="text-sm font-bold text-white max-w-[90%]">
+              <div className="text-sm md:text-lg font-bold text-white max-w-[90%]">
                 {data.question}
               </div>
               <div className="ml-2  text-2xl text-white max-w-[10%]">
@@ -51,7 +51,7 @@ const FAQ = () => {
 
             {/* Answer (conditionally rendered) */}
             {activeIndex === index && (
-              <p className="mt-2 text-neutral-300 text-xs">{data.answer}</p>
+              <p className="mt-2 text-neutral-300 text-xs md:text-base">{data.answer}</p>
             )}
           </div>
         ))}
