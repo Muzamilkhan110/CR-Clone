@@ -6,12 +6,12 @@ import ToolsLogo from "@/components/toolslogo/ToolsLogo";
 import { ourData } from "@/app/data/OurApproachData/page";
 import Button from "@/components/button/Button";
 
-const OurApproach = () => {
+const OurApproach = ({ data }: { data: any }) => {
   return (
     <div className="max-w-[90%] xl:max-w-[80%] m-auto">
       <div className="">
-        {ourData.filter((member)=> member.id % 2 === 1).map((data, index) => (
-          <div >
+        {ourData.map((data, index) => (
+          <div key={index}>
             <div className="xl:flex items-center gap-10 pr-[8%]">
               <div>
                 <ServiceComponent
@@ -25,8 +25,8 @@ const OurApproach = () => {
                 <div className="grid grid-cols-3 gap-4">
                   {data.assets.map((image, index) => (
                     <ToolsLogo
+                    key={index}
                       className="bg-zinc-900"
-                    
                       imageSrc={image.url}
                       imageAlt={image.alt}
                     />

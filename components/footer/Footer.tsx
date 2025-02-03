@@ -9,7 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-neutral-900 text-gray-300 ">
-      <div className="container m-auto">
+      <div className="max-w-[1280px] m-auto">
       <div className="py-10 flex justify-center items-center h-[100px]">
         <Logo />
       </div>

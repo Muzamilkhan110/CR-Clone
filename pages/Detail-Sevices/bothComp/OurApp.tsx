@@ -4,12 +4,12 @@ import ServiceComponent from "@/components/ServiceComp/ServiceComp";
 import ToolsLogo from "@/components/toolslogo/ToolsLogo";
 import { ourData } from "@/app/data/OurApproachData/page";
 
-const OurApp = () => {
+const OurApp = ({ data }: { data: any }) => {
   return (
     <div className="bg-slate-500">
       <div className="max-w-[90%] xl:max-w-[80%] m-auto">
         <div className="">
-          {ourData.filter((member) => member.id % 2 === 0).map((data, index) => (
+          {ourData.map((data, index) => (
             <div key={index}>
               <div className="xl:flex items-center gap-10 pr-[8%]">
                 <ServiceComponent
@@ -30,12 +30,6 @@ const OurApp = () => {
                   </div>
                 </div>
               </div>
-              {}
-              {/* <div className="xl:py-6 pb-4">
-              {data.question.map((question) => (
-                <FAQ question={question.question} answer={question.answer} />
-              ))}
-            </div> */}
             </div>
           ))}
         </div>
