@@ -3,7 +3,7 @@ import Image from "next/image";
 const CreationService = () => {
   return (
     <section
-      className="flex items-center flex-col h-[calc(100vh-85px)]  max-lg:h-[calc(100vh-66px)] max-sm:h-[calc(100vh-300px)] overflow-hidden object-cover md:shrink-0"
+      className="flex items-center flex-col h-[calc(100vh-20px)]  max-lg:h-[calc(100vh-66px)] max-sm:h-[calc(100vh-100px)] overflow-hidden object-cover bg-no-repeat  md:shrink-0"
       style={{ backgroundImage: "url('/services-banner.webp')" }}
     >
       <div className="container m-auto">

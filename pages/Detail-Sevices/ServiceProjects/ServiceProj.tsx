@@ -9,14 +9,15 @@ import ServiceSliderCard from "@/components/ServiceSlider/ServiceSlider";
 export const ServiceProj = () => {
   return (
     <div
-      className=" h-[calc(100vh-85px)] border-t  max-lg:h-[calc(100vh-66px)] max-sm:h-[calc(100vh-73px)] overflow-hidden object-cover md:shrink-0"
+      className="relative max-h-[90vh] md:h-[120vh] sm:h-[110vh] max-lg:h-[calc(100vh-66px)]  max-sm:h-[calc(100vh-20px)]
+       bg-cover bg-center  overflow-hidden"
       style={{ backgroundImage: "url('/casestudies.webp')" }}
     >
-      <div className="text-lg text-white font-bold flex flex-wrap justify-center gap-1 pt-3 px-4">
-        <h1 className="useclass">Successfully</h1>
+      <div className="text-lg md:text-2xl xl:text-4xl text-white font-bold flex flex-wrap justify-center gap-1 py-2 md:py-6 px-4">
+        <h1 className="useclass ">Successfully</h1>
         Developed Application
       </div>
-      <div className="max-w-[1140px]">
+      <div className="container m-auto flex ">
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
@@ -25,24 +26,21 @@ export const ServiceProj = () => {
           pagination={{
             clickable: true,
           }}
-          autoplay={
-            {
-              delay: 2000,
-            }
-          }
+          autoplay={{
+            delay: 2000,
+          }}
           speed={600}
+          className="md:max-w-[85%]"
         >
-          {ServiceData.map((data, index) => (
-            <div key={index}>
-              <SwiperSlide>
-                <ServiceSliderCard
-                  heading={data.heading}
-                  description={data.description}
-                  imageSrc={data.imageSrc}
-                  imageAlt={data.imageAlt}
-                />
-              </SwiperSlide>
-            </div>
+          {ServiceData.map((data) => (
+            <SwiperSlide key={data.id}>
+              <ServiceSliderCard
+                heading={data.heading}
+                description={data.description}
+                imageSrc={data.imageSrc}
+                imageAlt={data.imageAlt}
+              />
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>
