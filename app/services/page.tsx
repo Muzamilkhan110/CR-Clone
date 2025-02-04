@@ -16,8 +16,10 @@ export default function page() {
       <ServiceProj />
       <AgileService />
       <Message />
+      <div className='py-6'>
       <Heading tittle="Contact" dynamic="Us" />
       <FormWithGrid />
+      </div>
     </main>
   )
 }

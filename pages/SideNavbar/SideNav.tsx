@@ -26,7 +26,7 @@ const SideNav: React.FC = () => {
       { name: "About us", href: "/about" },
       { name: "Industries", href: "/industries" },
       { name: "Services", href: "/services" },
-      { name: "Case Study", href: "/case-study" },
+      { name: "Case Study", href: "/casestudy" },
       { name: "Feed", href: "/feed" },
       { name: "Careers", href: "/careers" },
     ];
