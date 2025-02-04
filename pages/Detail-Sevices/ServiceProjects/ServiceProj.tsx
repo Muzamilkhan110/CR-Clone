@@ -5,15 +5,14 @@ import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import ServiceSliderCard from "@/components/ServiceSlider/ServiceSlider";
+import "swiper/css";
+
+
 
 export const ServiceProj = () => {
   return (
-    <div
-      className="relative max-h-[90vh] md:h-[120vh] sm:h-[110vh] max-lg:h-[calc(100vh-66px)]  max-sm:h-[calc(100vh-20px)]
-       bg-cover bg-center  overflow-hidden"
-      style={{ backgroundImage: "url('/casestudies.webp')" }}
-    >
-      <div className="text-lg md:text-2xl xl:text-4xl text-white font-bold flex flex-wrap justify-center gap-1 py-2 md:py-6 px-4">
+    <div className="bg-zinc-900 ">
+      <div className="text-lg md:text-2xl xl:text-4xl text-white font-bold flex flex-wrap justify-center gap-1  px-4">
         <h1 className="useclass ">Successfully</h1>
         Developed Application
       </div>
@@ -25,11 +24,12 @@ export const ServiceProj = () => {
           loop
           pagination={{
             clickable: true,
+
           }}
           autoplay={{
-            delay: 2000,
+            delay: 1000,
           }}
-          speed={600}
+          speed={1000}
           className="md:max-w-[85%]"
         >
           {ServiceData.map((data) => (
