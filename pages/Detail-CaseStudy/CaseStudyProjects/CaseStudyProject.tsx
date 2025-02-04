@@ -22,7 +22,7 @@ const CaseStudyProject = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="">
       <div className="">
         {displayedData.map((data, index) => (
           <IndusComp
