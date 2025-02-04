@@ -5,7 +5,7 @@ import ImageCard from '@/components/RecentNews/Image-Card'
 import { useState } from 'react';
 
 
-const itemsPerPageConfig = [7, 2];
+const itemsPerPageConfig = [6, 3];
 
 const NewsFeed = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -20,10 +20,11 @@ const NewsFeed = () => {
       const changePage = (pageNumber: number) => {
         if (pageNumber >= 1 && pageNumber <= totalPages) {
           setCurrentPage(pageNumber);
+          window.scrollTo({ top: 0, behavior: "smooth" }); 
         }
       };
   return (
-    <div>
+    <div className='container-custom m-auto'>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
             {displayedData.map((card, index) => (
               <ImageCard

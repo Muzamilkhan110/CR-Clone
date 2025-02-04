@@ -18,6 +18,7 @@ const CaseStudyProject = () => {
   const changePage = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
+      window.scrollTo({ top: 0, behavior: "smooth" }); 
     }
   };
 

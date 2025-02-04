@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { faqs } from "@/app/data/faqsData/FaqsData";
 import Heading from "@/components/component-heading/Heading";
+import Image from "next/image";
 
 const FAQ = () => {
   // Track which question is expanded
@@ -35,9 +36,25 @@ const FAQ = () => {
                 className="flex justify-between items-center w-full text-left xl:text-lg font-medium focus:outline-none"
               >
                 <span>{faq.question}</span>
-                <span className="ml-2  text-2xl text-white">
-                  {activeIndex === index ? "−" : "+"}
-                </span>
+                <div className="w-[20px] h-[20px] ml-2 flex-shrink-0">
+                  {activeIndex === index ? (
+                    <Image
+                      src="/collapsew.png"
+                      alt="Collapse"
+                      width={20}
+                      height={20}
+                      className="w-full h-full"
+                    />
+                  ) : (
+                    <Image
+                      src="/expandw.png"
+                      alt="Expand"
+                      width={20}
+                      height={10}
+                      className="w-full h-full"
+                    />
+                  )}
+                </div>
               </button>
 
               {/* Answer (conditionally rendered) */}

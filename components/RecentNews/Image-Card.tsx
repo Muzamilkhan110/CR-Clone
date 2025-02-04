@@ -35,4 +35,4 @@ const ImageCard: React.FC<ImageCardProps> = ({
     </div>
   )
 }
-export default ImageCard
+export default ImageCard;
