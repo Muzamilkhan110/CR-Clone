@@ -21,7 +21,7 @@ const CareerCR: React.FC<CareerCRProps> = ({ imageSrc, imageAlt, text }) => {
           />
         </div>
         <div className="pt-8 text-center">
-          <p className="text-white text-xs">{text}</p>
+          <p className="text-white text-xs md:text-sm xl:text-base">{text}</p>
         </div>
       </div>
     </div>

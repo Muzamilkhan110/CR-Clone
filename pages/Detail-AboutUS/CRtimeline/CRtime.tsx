@@ -37,7 +37,7 @@ const TimelineButton = ({ content }: { content: string }) => {
         </div>
         <div className="bg-black p-3 rounded-md ">
             <h2 className="text-lg font-semibold pb-6">{content}</h2>
-            <p className="text-sm text-neutral-500">{descriptions}</p>
+            <p className="text-sm text-neu  tral-500">{descriptions}</p>
         </div>
         </div>
      </div>
