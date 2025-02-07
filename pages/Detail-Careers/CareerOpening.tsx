@@ -5,9 +5,13 @@ import { dataFlow } from "@/app/data/CareerOpening/page";
 const CareerOpening = () => {
   return (
     <div className="bg-zinc-900 py-12">
-      <div className="container-custom m-auto">
+      <section className="text-white flex justify-center py-7 gap-2 text-lg font-bold lg:text-[34px] md:text-2xl mb-6">
+        <h2 className="useclass">Career</h2>
+        Openings
+      </section>
+      <div className="container-custom max-md:w-[100vh] max-lg:w-[150vh] m-auto">
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-9">
           {dataFlow.map((data, index) => (
             <Vacancy
               key={index}
