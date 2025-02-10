@@ -1,52 +1,61 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
-import Logo from '@/components/Logo/Logo';
-import Button from '@/components/button/Button';
-import Image from 'next/image';
-
+import Logo from "@/components/Logo/Logo";
+import Button from "@/components/button/Button";
+import Image from "next/image";
+import Link from "next/link";
 const SideNav: React.FC = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [currentPath, setCurrentPath] = useState("");
-  
-    useEffect(() => {
-      setCurrentPath(window.location.pathname);
-    }, []);
-  
-    useEffect(() => {
-      // Disable scrolling when menu is open
-      if (isMenuOpen) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
-    }, [isMenuOpen]);
-  
-    const links = [
-      { name: "Home", href: "/" },
-      { name: "About us", href: "/about" },
-      { name: "Industries", href: "/industries" },
-      { name: "Services", href: "/services" },
-      { name: "Case Study", href: "/casestudy" },
-      { name: "Feed", href: "/feed" },
-      { name: "Careers", href: "/careers" },
-    ];
-  
-    const socialLinks = [
-      { icon: "fab fa-facebook-f", href: "https://www.facebook.com/conceptrecall" },
-      { icon: "fab fa-instagram", href: "https://www.instagram.com/teamconceptrecall/" },
-      { icon: "fab fa-linkedin-in", href: "https://www.linkedin.com/company/conceptrecall" },
-    ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
+
+  useEffect(() => {
+    // Disable scrolling when menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
+
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "About us", href: "/about" },
+    { name: "Industries", href: "/industries" },
+    { name: "Services", href: "/services" },
+    { name: "Case Study", href: "/casestudy" },
+    { name: "Feed", href: "/feed" },
+    { name: "Careers", href: "/careers" },
+  ];
+
+  const socialLinks = [
+    {
+      icon: "fab fa-facebook-f",
+      href: "https://www.facebook.com/conceptrecall",
+    },
+    {
+      icon: "fab fa-instagram",
+      href: "https://www.instagram.com/teamconceptrecall/",
+    },
+    {
+      icon: "fab fa-linkedin-in",
+      href: "https://www.linkedin.com/company/conceptrecall",
+    },
+  ];
   return (
     <div>
-        <div className='flex lg:hidden justify-between py-3 px-4'>
+      <div className="flex lg:hidden justify-between py-3 px-4">
         <Logo />
         <button
           className="lg:hidden  rounded focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen(true)}
         >
-         <Image src={'/hamburger.svg'}  alt='image' width={20} height={10}/>
+          <Image src={"/hamburger.svg"} alt="image" width={20} height={10} />
         </button>
-        </div>
+      </div>
 
       {/* Mobile Menu */}
       <div
@@ -85,7 +94,12 @@ const SideNav: React.FC = () => {
 
           {/* Speak to an Expert Button */}
           <div className="py-2">
-            <Button text="Speak to an Expert" />
+            <Link href={"/speakexpert"}>
+              <Button
+                text="Speak to an Expert"
+                onClick={() => setIsMenuOpen(false)}
+              />
+            </Link>
           </div>
 
           {/* Social Media Icons */}
@@ -113,7 +127,7 @@ const SideNav: React.FC = () => {
         ></div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default SideNav
+export default SideNav;

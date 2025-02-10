@@ -56,7 +56,7 @@ const NewsFeed = () => {
               currentPage === index + 1
                 ? "bg-bguseclass text-white"
                 : "text-zinc-400"
-            } rounded-2xl`}
+            } rounded-lg`}
           >
             {index + 1}
           </button>

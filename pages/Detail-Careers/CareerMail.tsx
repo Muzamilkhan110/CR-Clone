@@ -63,7 +63,7 @@ const CareerMail = () => {
                     type="file"
                     id={id}
                     required={required}
-                    className="w-full hidden mt-1 py-2 border border-neutral-600 bg-black text-white focus:outline-none focus:ring-0 caret-white"
+                    className="w-full  mt-1 py-2 border-neutral-600 bg-black text-white focus:outline-none focus:ring-0 caret-white"
                   />
                   <div className="text-neutral-500 text-xs text-center leading-relaxed">
                     <div className="pt-4">

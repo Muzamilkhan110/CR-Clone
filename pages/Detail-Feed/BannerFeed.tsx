@@ -8,7 +8,7 @@ const BannerFeed = () => {
     >
       <div className="container-custom m-auto h-full">
         <div className="">
-          <div className="text-white font-bold text-[22px] md:text-[34px] xl:text-[56px] text-center py-7 md:pt-[20%] lg:pt-[30%]">
+          <div className="text-white font-bold text-[22px] md:text-[34px] xl:text-[56px] text-center py-7 md:pt-[20%]">
             Discover Insights and Inspiration: Dive into our Latest
             <span className="useclass ml-1">Blog Posts</span>
           </div>

@@ -8,7 +8,7 @@ const BannerPage = () => {
     >
       <div className="container-custom m-auto h-full">
         <div className="">
-        <div className="text-white font-bold text-[22px] md:text-[34px] xl:text-[56px] text-center py-7 md:pt-[20%] lg:pt-[30%]">
+        <div className="text-white font-bold text-[22px] md:text-[34px] xl:text-[56px] text-center py-7 md:pt-[20%]">
           Innovation Beyond Limits: Explore Our
           <span className="useclass ml-1">Project Showcase</span>
         </div>
