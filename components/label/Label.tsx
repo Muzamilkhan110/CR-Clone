@@ -17,11 +17,11 @@ const FormWithGrid = () => {
   return (
     <div className="container-custom m-auto">
     <div className="flex flex-col  xl:px-14 my-10 mx-auto max-w-screen-xl md:flex-row">
-      <div className="md:grid grid-cols-2 gap-4 p-4 md:w-3/5">
+      <div className="md:grid grid-cols-2 gap-4  md:w-3/5">
         {fields.map(({ id, label, required, fullWidth }) => (
           <div
             key={id}
-            className={`p-2 rounded-md ${fullWidth ? "col-span-2" : ""}`}
+            className={`py-2 rounded-md ${fullWidth ? "col-span-2" : ""}`}
           >
             <label
               htmlFor={id}

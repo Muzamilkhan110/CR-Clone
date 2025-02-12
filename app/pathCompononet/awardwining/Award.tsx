@@ -4,11 +4,10 @@ import Heading from "@/components/component-heading/Heading";
 import Card from "@/components/cards/Crads";
 import Button from "@/components/button/Button";
 import Link from "next/link";
-import Image from "next/image";
 
 const Award = () => {
   return (
-    <section className="container m-auto max-w-screen-lg">
+    <section className="container-custom m-auto">
       <div className="">
         <div className="py-[9%]">
           <Heading
@@ -18,7 +17,8 @@ const Award = () => {
               your wildest expectations!"
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-10 px-3 text-white">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-10 text-white">
           {cardDescription.map((card, index) => (
             <Card
               key={index}

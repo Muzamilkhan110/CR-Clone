@@ -64,9 +64,9 @@ const OverView =() =>{
     }, [hasAnimated]);
     return (
         <div className="bg-neutral-900 py-10" ref={gridRef}>
-            <div className="container mx-auto max-w-screen-lg">
+            <div className="container-custom m-auto">
             
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-[7%]">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {
                 Details.map((item, index) => (
                     <div key={index} className={`${index < 3 ? "md:border-r" : ""} h-28 p-4`}>

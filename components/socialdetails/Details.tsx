@@ -4,7 +4,7 @@ import Link from "next/link";
 const Details = () => {
     return (
        
-            <div className="container text-white pt-10 px-4 sm:px-6 lg:px-8">
+            <div className="container-custom text-white pt-10 sm:px-6 lg:px-8">
               {/* Heading Section */}
               <div className="flex flex-wrap gap-2 font-bold text-2xl sm:text-3xl">
                 <h1 className="useclass">Speak</h1>

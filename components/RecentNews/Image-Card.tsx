@@ -20,8 +20,8 @@ const ImageCard: React.FC<ImageCardProps> = ({
     svgIco,
 }) =>{
   return (
-    <div className="rounded-2xl bg-black container">
-        <Image className="flex h-[35vh] rounded-t-2xl"  width={1000} height={0} src={imageSrc} alt={imageAlt} ></Image>
+    <div className="rounded-2xl bg-black">
+        <Image className="flex h-[34vh] rounded-t-2xl"  width={1000} height={0} src={imageSrc} alt={imageAlt} ></Image>
         <div className=" my-5 mx-4 overflow-hidden">
         <div className="">
             <h2 className="text-xl font-semibold  line-clamp-2 ">{title}</h2>

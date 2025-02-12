@@ -7,11 +7,12 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { projectSlide } from "@/app/data/projectsslider/projectslide";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ProjectProps {
   projects: {
     id: number;
-    imageSrc: string;
+    imageSrc: string | StaticImport;
     imageAlt: string;
     title: string;
     descriiption: string;
@@ -19,8 +20,8 @@ interface ProjectProps {
 }
 const Project: React.FC<ProjectProps> = ({ projects }) => {
   return (
-    <div className="container m-auto my-">
-      <div className="py-20 px-[10%]">
+    <div className="container-custom m-auto">
+      <div className="py-20">
         <Swiper
           className="mySwiper"
           spaceBetween={10}

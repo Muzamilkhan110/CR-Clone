@@ -9,8 +9,8 @@ import { cardDescription4 } from "@/app/data/clientreviews/page";
 import SliderCard from "@/components/Testimonals/SliderCard";
 const TestComp = () => {
   return (
-    <section className="container m-auto my-20">
-      <div className="px-[7%]">
+    <section className="container-custom m-auto my-20">
+      <div className="">
         <Heading
           tittle="Our"
           dynamic="Testimonials"
@@ -39,7 +39,7 @@ const TestComp = () => {
           },
         }}
         navigation={false}
-        scrollbar={{ draggable: true }}
+
         loop
         autoplay={{
           delay: 2000,
@@ -50,7 +50,7 @@ const TestComp = () => {
             "--swiper-pagination-color": "#fff",
           } as React.CSSProperties
         }
-        className="w-[65%]"
+        className=""
       >
         {cardDescription4.map((card, index) => (
           <SwiperSlide key={index} className="">

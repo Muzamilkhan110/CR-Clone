@@ -46,9 +46,13 @@ const DropMail = () => {
               <div className="mt-4 text-xs md:text-sm xl:text-base text-neutral-400">
                 join our dynamic team
               </div>
-              <div className="flex gap-4 items-center font-bold  mt-4 useclass text-sm md:text-sm xl:text-base">
+              <div className="flex gap-4 items-center font-bold cursor-pointer mt-4 useclass text-sm md:text-sm xl:text-base">
+                <Link href={"/careers"}>
                 <p>View Open Posotions</p>
+                </Link>
+                <Link href={"/careers"}>
                 <Image  src={'/arrowright.svg'} alt="image" width={30} height={10} />
+                </Link>
               </div>
             </div>
           </div>

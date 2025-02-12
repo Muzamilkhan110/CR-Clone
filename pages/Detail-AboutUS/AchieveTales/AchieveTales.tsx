@@ -4,8 +4,8 @@ import Image from "next/image";
 import Button from "@/components/button/Button";
 const AchieveTales = () => {
   return (
-    <div className="bg-zinc-900  py-4 lg:py-14">
-      <div className="container m-auto">
+    <div className="bg-zinc-900  py-4 lg:py-14 relative z-50">
+      <div className="container m-auto ">
         <div className="xl:px-[7%]">
       <div className="">
         <Heading

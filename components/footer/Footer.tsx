@@ -14,9 +14,9 @@ const Footer: React.FC = () => {
           <Logo />
         </div>
         {/* Border */}
-        <hr className="border-gray-400 mx-10" />
+        <hr className="border-gray-400" />
         {/* Content Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 py-10 px-4 lg:px-24">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 py-10">
           {/* Links and Contact Us */}
           <div className="lg:col-span-2 grid grid-cols-2 md:grid-cols-2">
             {/* Our Links */}

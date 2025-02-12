@@ -6,8 +6,8 @@ import Button from "@/components/button/Button";
 const RecentNews = () => {
   return (
     <section className="bg-zinc-900 py-7 ">
-      <div className="container m-auto  ">
-        <div className="xl:px-[10%]">
+      <div className="container-custom m-auto  ">
+        <div className="">
           <div className="my-16">
             <Heading
               tittle="Recent"
@@ -17,7 +17,7 @@ const RecentNews = () => {
                 in your professional journey. Dive in now!"
             />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  text-white">
             {cardDescription3.map((card, index) => (
               <ImageCard
                 key={index}

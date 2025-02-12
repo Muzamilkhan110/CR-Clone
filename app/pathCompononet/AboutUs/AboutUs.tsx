@@ -21,7 +21,7 @@ const AboutUS = () => {
   return (
     <section className="flex justify-center items-center">
       <div className="container-custom mx-auto">
-        <div className="px-[2%] py-10">
+        <div className=" py-10">
           <div className="pb-12">
             <Heading
               tittle="About"
